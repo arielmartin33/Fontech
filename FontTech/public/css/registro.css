@@ -1,5 +1,6 @@
 .formulario-registro{
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,11 +17,26 @@ form{
 .formularioR input{
     padding: 10px;
     margin: 5px;
-    border-bottom: 15px;
+   
 }
 
- .social-login-elemento img{
-    margin-left: 25px;
+.social-login-elemento img{
+    margin-left: 20px;
     
 } 
 
+.btn-crea{
+    /* margin-left: 30%; */
+    font-size: 15px;
+    font-family: "viga", sans-serif;
+    width: 150px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px){
+    .formularioR input{
+      width: 350px;
+       
+    }
+
+}
