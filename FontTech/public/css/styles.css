@@ -1,0 +1,140 @@
+ @import url(menu.css);
+ @import url(slider-tarjetas.css);
+ @import url(popup.css);
+ @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Viga&display=swap');
+ @import url(registro.css);
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    font-family: 'Viga', sans-serif;
+    padding: 5px;
+}
+header{
+   
+    width:100%;
+    height: auto;
+    background: white;
+    
+    color: #fff;
+    position:fixed; 
+    top: 0;
+    left: 0;
+    z-index: 100;
+  
+    
+}
+
+.fa-bars{
+    color: rgba(22, 22, 22, 0.7);
+}
+.fa-user, .fa-shopping-cart{
+    color: rgba(22, 22, 22, 0.7);
+    font-size: 30px;
+    margin: 5px;
+    float: right;
+    margin-top: 10px;
+    
+}
+.contenedor{
+    width: 96%;
+    margin:auto;  
+  
+}
+.logo{
+    display: flex;
+    
+}
+
+.homeTitle {
+    text-align: center;
+    font-size: 15px;
+    
+ 
+}
+
+header .contenedor{
+    display: table;
+}
+
+section{
+    width: 100%;
+    
+}
+#productos{
+    text-align: center;
+    margin-top: 50px;
+}
+#productos .contenedor{
+    background-color: #fff; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#productos .contenedor img{
+    margin: 10px;
+    width: 180px;
+    height: 180px;
+    
+}  
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: "viga", sans-serif;
+}
+footer input{
+    width: 100%;
+    display: flex;
+    font-size: 30px;
+
+}
+
+footer .direccion, .newsletter{
+    margin: 15px;
+    
+}
+footer button{
+   /*  font-size: 30px;
+    color: rgb(68, 65, 65);
+    background: #51D9DD;
+    border-radius: 10px;
+    border-color: #51D9DD;
+    width: 200px;
+    height: 70px;
+ */
+    
+    text-decoration: none;
+    color: black;
+	font-size: 15px;
+	background: #51D9DD;
+    border: 10px solid #51D9DD;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+
+@media (min-width:1024px){
+    .contenedor{
+        width: 100%;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .homeTitle{
+	        font-size: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+    }
+    .container .card a {
+
+        font-size: 20px;
+    }
+}
