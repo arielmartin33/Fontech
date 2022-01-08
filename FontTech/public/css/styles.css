@@ -85,11 +85,16 @@ section{
 }  
 footer .contenedor{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    font-size: 28px;
+    font-size: 20px;
     font-family: "viga", sans-serif;
+}
+footer p{
+    font-family: sans-serif;
+    line-height: 20px;
 }
 footer input{
     width: 100%;
@@ -102,25 +107,13 @@ footer .direccion, .newsletter{
     margin: 15px;
     
 }
-footer button{
-   /*  font-size: 30px;
-    color: rgb(68, 65, 65);
-    background: #51D9DD;
-    border-radius: 10px;
-    border-color: #51D9DD;
-    width: 200px;
-    height: 70px;
- */
-    
-    text-decoration: none;
-    color: black;
-	font-size: 15px;
-	background: #51D9DD;
-    border: 10px solid #51D9DD;
-	border-radius: 5px;
-	margin-left: 5px;
+footer button{    
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'viga';
+    font-size: 15px;
+    cursor: pointer;
 }
-
 
 @media (min-width:1024px){
     .contenedor{
@@ -137,5 +130,21 @@ footer button{
     .container .card a {
 
         font-size: 20px;
+    }
+    footer .contenedor {
+       padding: 40px;
+    }
+}
+@media (min-width:320px){
+    footer .contenedor{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:768px){
+    footer .contenedor{
+        font-size: 15px;
+    }
+    .newsletter{
+        margin-top:70px;
     }
 }
