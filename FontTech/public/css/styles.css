@@ -4,6 +4,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Viga&display=swap');
  @import url(registro.css);
  @import url(carrito.css);
+ @import url(producto.css);
+
+ 
  *{
     margin: 0;
     padding: 0;
@@ -132,7 +135,9 @@ footer button{
         font-size: 20px;
     }
     footer .contenedor {
-       padding: 40px;
+       padding: 90px;
+       display: inline-flex;
+       justify-content: space-evenly;
     }
 }
 @media (min-width:320px){

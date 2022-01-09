@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/3b6e9de62a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>FontTech</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <img src="../img/Logo.png" alt="" >         
+            <input type="checkbox" id="menu-bar">
+            <label class="fas fa-bars" for="menu-bar"></label>
+             
+            <nav class="menu">
+                <a href="">Productos</a>
+                <a href="">Sucursales</a>
+                <a href="">Contacto</a>
+                <a href="">Empresa</a>
+            </nav>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+          
+            <!-- INICIO POPUP LOGIN-->
+
+            <a href="#modal"><i class="fas fa-user"></i></a>
+            <!-- <div class="full"> -->
+            <div class="container-all centrado" id="modal">
+        
+                    <div class="contenedor-text">
+
+                        <!-- <div id="social-login"> -->
+                            <h1>Iniciar Sesión con...</h1>
+                            <!-- </div> -->
+                           <div class="social-login-elemento">
+                                <div>
+                                    <img src="../img/google.svg" alt="">
+                                    <span>Google</span>             
+                                </div>
+                                <div>            
+                                    <img src="../img/facebook.svg" alt="">
+                                    <span>Facebook</span>
+                                </div>
+                           </div>
+                        </div>
+                        
+                        <div class="formulario">
+                            <form class="inputs-container">
+                             <p>O</p> 
+                                <input class="mail" type="email" placeholder="E-mail">
+                                <input class="password" type="password" placeholder="Contaseña">
+                            </form>
+                            <button class="btn-login">Login</button>
+                        </div>                                                  
+                        <div class="columna">
+                            <a href="#"><p>¿Olvidaste tu contraseña? </p></a>
+                            <!-- <button class="btn-click">Hace click aca</button> -->
+                        </div>
+                        <div class="columna">
+                            <a href="/registro"><p>¿Aún no tenes cuenta? </p></a>
+                            <!-- <button class="btn-crea-tu-cuenta"><a href='registro'>Crea tu cuenta</a></button> -->
+                        </div>
+                        <a href="#" class="btn-close-popup">X</a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+          <!--   FIN POPUP -->
+    
+        
+    </header>
+   <main>
+        <div class="contenedor-producto">
+            <div class="escritorio">
+            <div class="h3">
+            <h3>Descripción del producto</h3>
+            </div>
+            <div class="producto-imgs">
+                <div class="img-principal">
+                    <img src="../img/acer/not acer.png" alt="">
+
+                </div>
+                <div class="img-secundaria">
+                    <img src="../img/not acer 2" alt="">
+                    <img src="../img/not acer 3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+            <div class="escritorio">
+            <div class="descripcion-producto">
+                <h2>Notebook Acer</h2>
+                <p>• Procesador: I5</p>
+                <p>• Memoria: 1Tb  </p>
+                <p>• Precio: $$$$$$</p>
+            </div>
+
+            <div class="pagos">
+                <h5>Medios de pago</h5>
+                <img src="../img/mercado-pago-banner.png" alt="">
+            </div>
+
+            <div class="btn-producto">
+                <button>COMPRAR <i class="fas fa-cart-plus"></i> </button>
+            </div>
+        </div>
+
+        </div>     
+
+
+</main>
+  
+ 
+
+    <footer>
+        <div class="contenedor">
+                <div class="direccion">
+                <h5>¿DÓNDE ESTAMOS?</h5>
+                <p><b>Corrientes Capital</b><br>Junin 1648 -CORRIENTES CAPITAL-<br>
+                    <p>Teléfono: 3624720453</p> 
+                    </p>
+                    <br>
+                <p><b>Resistencia -Casa Central-</b><br>santiago del estero 414 -Resistencia -Chaco<br>
+                    <p>Teléfono: 3624661814 </p>
+                   </p>
+                    <br>
+                <p><b>Resistencia -MA</b><br>San Buenaventura del Monte Alto 187<br>
+                    <p>Teléfono: 3624720452</p>  
+                    </p>
+                </div>
+                
+        <div class="newsletter"> 
+            <h5 >NEWSLETTER</h5>
+            <p >Recibí ofertas en tu email</p>
+            <form action="/registro" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <button type="submint"> Suscribirse </button>
+            </form>
+        </div>
+    </footer> 
+
+</body>
+</html>
+   
+
+
+
+
+
+
+
+
