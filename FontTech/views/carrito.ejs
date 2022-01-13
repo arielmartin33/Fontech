@@ -1,164 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://kit.fontawesome.com/3b6e9de62a.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>FontTech</title>
-</head>
-<body>
-    <header>
-        <div class="contenedor">
-            <img src="../img/Logo.png" alt="" >         
-            <input type="checkbox" id="menu-bar">
-            <label class="fas fa-bars" for="menu-bar"></label>
-             
-            <nav class="menu">
-                <a href="">Productos</a>
-                <a href="">Sucursales</a>
-                <a href="">Contacto</a>
-                <a href="">Empresa</a>
-            </nav>
-            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-          
-            <!-- INICIO POPUP LOGIN-->
+<%- include ('./partials/head.ejs') %>
 
-            <a href="#modal"><i class="fas fa-user"></i></a>
-            <!-- <div class="full"> -->
-            <div class="container-all centrado" id="modal">
-        
-                    <div class="contenedor-text">
+    <body>
+        <%- include ('./partials/header.ejs') %>
+            <main>
+                <div class="contenedor-carrito">
+                    <h1>MI CARRITO</h1>
+                    <div class="prueba">
+                        <div class="seccion1">
+                            <!-- DESCRIPCIÖN Y FOTO -->
+                            <div class="seccion1-2">
+                                <h3>Notebook Acer</h3>
+                                <p>• Procesador: I5</p>
+                                <p>• Memoria: 1Tb</p>
+                                <p>• Precio: $$$$$$</p>
+                            </div>
 
-                        <!-- <div id="social-login"> -->
-                            <h1>Iniciar Sesión con...</h1>
-                            <!-- </div> -->
-                           <div class="social-login-elemento">
-                                <div>
-                                    <img src="../img/google.svg" alt="">
-                                    <span>Google</span>             
-                                </div>
-                                <div>            
-                                    <img src="../img/facebook.svg" alt="">
-                                    <span>Facebook</span>
-                                </div>
-                           </div>
+                            <img src="../img/not acer.png" alt="">
                         </div>
-                        
-                        <div class="formulario">
-                            <form class="inputs-container">
-                             <p>O</p> 
-                                <input class="mail" type="email" placeholder="E-mail">
-                                <input class="password" type="password" placeholder="Contaseña">
-                            </form>
-                            <button class="btn-login">Login</button>
-                        </div>                                                  
-                        <div class="columna">
-                            <a href="#"><p>¿Olvidaste tu contraseña? </p></a>
-                            <!-- <button class="btn-click">Hace click aca</button> -->
+
+                        <div class="seccion2">
+                            <!-- CANTIDAD Y TOTAL -->
+                            <input type="number" min="1" max="5" value="1">
+                            <p>TOTAL: $$$$$$</p>
                         </div>
-                        <div class="columna">
-                            <a href="/registro"><p>¿Aún no tenes cuenta? </p></a>
-                            <!-- <button class="btn-crea-tu-cuenta"><a href='registro'>Crea tu cuenta</a></button> -->
+
+                        <div class="seccion3">
+                            <!-- BOTON SEGUIR COMPRANDO -->
+                            <button> Seguir comprando <i class="fas fa-cart-arrow-down"></i></button>
                         </div>
-                        <a href="#" class="btn-close-popup">X</a>
                     </div>
-                <!-- </div> -->
-            </div>
-        </div>
-          <!--   FIN POPUP -->
-    
-        
-    </header>
-   
-    <main>
-        <div class="contenedor-carrito">
-            <h1>MI CARRITO</h1>
-            <div class="prueba">
-            <div class="seccion1">  <!-- DESCRIPCIÖN Y FOTO -->
-               <div class="seccion1-2"> 
-                  <h3>Notebook Acer</h3>
-                  <p>• Procesador: I5</p>
-                  <p>• Memoria: 1Tb</p>
-                  <p>• Precio: $$$$$$</p>
-                 </div> 
-    
-                <img src="../img/not acer.png" alt="" >
-                </div>
-            
-            <div class="seccion2"> <!-- CANTIDAD Y TOTAL -->
-                <input type="number" min="1" max="5" value="1">
-                <p>TOTAL:  $$$$$$</p>
-            </div>
-        
-            <div class="seccion3"> <!-- BOTON SEGUIR COMPRANDO -->
-                <button> Seguir comprando <i class="fas fa-cart-arrow-down"></i></button>
-            </div>
-        </div>
-        <div class="prueba2">
-            <div class="seccion4">
-                
-                <p>TOTAL: $$$$$$</p>
-            </div>
-               
-            <div class="seccion4-1">
-                <p>ENVIO:</p>
-                <span><input type="search" placeholder="C.P:"> <i class="fas fa-search-location"></i></span>
-                </div>
-            <div class="seccion4-2">
-                <p>Retiro en sucursal: <input type="checkbox"></p>
-                </div>
-            <div class="seccion4-3">
-                <p>Cupón:</p>
-                <span> <input type="number"><i class="fas fa-check"></i></span>
-            </div>
-            <div class="seccion4-4">
-                <p>TOTAL A PAGAR:</p>
-                <p>$$$$$$</p>
-            </div>
-            <div class="seccion4-5">
-                <button> Finalizar Compra <i class="fas fa-check"></i></button>
-            </div>
-            
-        </div>
-        </div>
-    
-       </main>
+                    <div class="prueba2">
+                        <div class="seccion4">
 
-    <footer>
-        <div class="contenedor">
-                <div class="direccion">
-                <h5>¿DÓNDE ESTAMOS?</h5>
-                <p><b>Corrientes Capital</b><br>Junin 1648 -CORRIENTES CAPITAL-<br>
-                    <p>Teléfono: 3624720453</p> 
-                    </p>
-                    <br>
-                <p><b>Resistencia -Casa Central-</b><br>santiago del estero 414 -Resistencia -Chaco<br>
-                    <p>Teléfono: 3624661814 </p>
-                   </p>
-                    <br>
-                <p><b>Resistencia -MA</b><br>San Buenaventura del Monte Alto 187<br>
-                    <p>Teléfono: 3624720452</p>  
-                    </p>
+                            <p>TOTAL: $$$$$$</p>
+                        </div>
+
+                        <div class="seccion4-1">
+                            <p>ENVIO:</p>
+                            <span><input type="search" placeholder="C.P:"> <i class="fas fa-search-location"></i></span>
+                        </div>
+                        <div class="seccion4-2">
+                            <p>Retiro en sucursal: <input type="checkbox"></p>
+                        </div>
+                        <div class="seccion4-3">
+                            <p>Cupón:</p>
+                            <span> <input type="number"><i class="fas fa-check"></i></span>
+                        </div>
+                        <div class="seccion4-4">
+                            <p>TOTAL A PAGAR:</p>
+                            <p>$$$$$$</p>
+                        </div>
+                        <div class="seccion4-5">
+                            <button> Finalizar Compra <i class="fas fa-check"></i></button>
+                        </div>
+
+                    </div>
                 </div>
-                
-        <div class="newsletter"> 
-            <h5 >NEWSLETTER</h5>
-            <p >Recibí ofertas en tu email</p>
-            <form action="/registro" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-                <br>
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email">
-                <br>
-                <button type="submint"> Suscribirse </button>
-            </form>
-        </div>
-    </footer> 
-</main>
-</body>
+
+            </main>
+
+            <%- include ('./partials/footer.ejs') %>
+                </main>
+    </body>
+
 </html>
-   
