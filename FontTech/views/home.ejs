@@ -17,14 +17,17 @@
 
                 <h1 class="homeTitle">PRODUCTOS EN OFERTA</h1>
                 <div class="container">
-
-                    <div class="card">
-                        <img src="../img/not acer.png">
-                        <h4>Acer TravelMate</h4>
-                        <p>$98.900,00</p>
-                        <a href="/producto">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
-
+                    <% products.forEach(product => { %>
+                     
+                        <div class="card">
+                            <img src="<%= product.images %> ">
+                            <h4><%= product.name %> Acer TravelMate</h4>
+                            <p><%= product.price %></p>
+                            <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
+                            <a href="/products/ <%= product.id %>">Mas Info</a>
+                        </div>
+                    <% }) %>
+<!-- 
                     <div class="card">
                         <img src="../img/not dell.png">
                         <h4>Dell Minsk DNS</h4>
@@ -58,7 +61,7 @@
                         <h4>HP 15-DY2056MS</h4>
                         <p>$135.000,00</p>
                         <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
+                    </div> -->
 
 
                     <section id="productos">
