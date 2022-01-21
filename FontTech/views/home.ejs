@@ -1,83 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <%- include ('./partials/head.ejs') %>
 
-    <body>
-        <%- include ('./partials/header.ejs') %>
-            <main>
-                <div id="slider">
-                    <figure>
-                        <img src="../img/banner.jpg">
-                        <img src="../img/DGHelp_Banner_HP-01-1.jpg">
-                        <img src="../img/banner.jpg">
-                        <img src="../img/DGHelp_Banner_Lenovo-01-3.jpg">
-                        <img src="../img/banner.jpg">
-                    </figure>
-                </div>
-
-                <h1 class="homeTitle">PRODUCTOS EN OFERTA</h1>
-                <div class="container">
-                    <% products.forEach(product => { %>
-                     
-                        <div class="card">
-                            <img src="<%= product.images %> ">
-                            <h4><%= product.name %> Acer TravelMate</h4>
-                            <p><%= product.price %></p>
-                            <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
-                            <a href="/products/ <%= product.id %>">Mas Info</a>
-                        </div>
-                    <% }) %>
-<!-- 
-                    <div class="card">
-                        <img src="../img/not dell.png">
-                        <h4>Dell Minsk DNS</h4>
-                        <p>$119.999,00</p>
-                        <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
-
-                    <div class="card">
-                        <img src="../img/not msi.png">
-                        <h4>MSI Skylake</h4>
-                        <p>$145.000,00</p>
-                        <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
-
-                    <div class="card">
-                        <img src="../img/not asus.png">
-                        <h4>Asus VivoBook X515EA</h4>
-                        <p>$114,799,00</p>
-                        <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
-
-                    <div class="card">
-                        <img src="../img/not lenovo.png">
-                        <h4>Lenovo V510</h4>
-                        <p>$85.499,00</p>
-                        <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div>
-
-                    <div class="card">
-                        <img src="../img/not hp.png">
-                        <h4>HP 15-DY2056MS</h4>
-                        <p>$135.000,00</p>
-                        <a href="#">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a>
-                    </div> -->
-
-
-                    <section id="productos">
-                        <div class="contenedor">
-                            <img src="../img/logo/acer.png" alt="">
-                            <img src="../img/logo/asus.png" alt="">
-                            <img src="../img/logo/dell.png" alt="">
-                            <img src="../img/logo/hp.png" alt="">
-                            <img src="../img/logo/lenovo.png" alt="">
-                            <img src="../img/logo/Msi-Logo.jpg" alt="">
-                        </div>
-                    </section>
-
-
-                    <%- include ('./partials/footer.ejs') %>
-            </main>
-    </body>
+<body>
+    <%- include ('./partials/header.ejs') %>
+    <main>
+        <div id="slider">
+            <figure>
+                <img src="../img/banner.jpg">
+                <img src="../img/DGHelp_Banner_HP-01-1.jpg">
+                <img src="../img/banner.jpg">
+                <img src="../img/DGHelp_Banner_Lenovo-01-3.jpg">
+                <img src="../img/banner.jpg">
+            </figure>
+        </div>
+    </main>
+    <%- include ('./partials/footer.ejs') %>
+</body>
 
 </html>

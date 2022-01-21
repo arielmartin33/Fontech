@@ -14,11 +14,11 @@ const controller = {
         const id = req.params.id;
         const productSelected = products.filter(product => product.id == id);
         console.log(productSelected);
-        res.render('products', {productSelected});
+        res.render('product-detail', {productSelected});
     },
 
     create: (req, res) => {
-        res.send('aca creo el producto');
+        res.render('product-create');
     },
     store: (req, res) =>{
         res.send('guardo en el json el producto');

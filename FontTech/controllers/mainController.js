@@ -8,10 +8,10 @@ const mainController = {
     
     index: (req, res) => {
         res.render('home', {products});
-    }
+    },
     // register: (req, res) =>{
-    //     return res.render('registro');
-    // },
+    //      return res.render('registro');
+    //  },
     // login: (req, res) => {
     //     return res.render('login');
     // },
