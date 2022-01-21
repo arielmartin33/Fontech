@@ -1,1 +1,1 @@
-Se ingreso en la pagina/carrito
+Se ingreso en la pagina/product/product-createSe ingreso en la pagina/carrito

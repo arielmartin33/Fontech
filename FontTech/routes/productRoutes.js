@@ -14,7 +14,7 @@ router.get('/:id', productsController.detail),
 
 // ********* Crear un nuevo producto ********
 
-router.get('/create', productsController.create);
+router.get('/product-create/', productsController.create);
 router.post('/', productsController.create);
 
 // ******** Editar un producto ********
