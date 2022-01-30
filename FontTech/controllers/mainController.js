@@ -7,7 +7,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
     
     index: (req, res) => {
-        res.render('home', {products});
+        const response = products.filter(product => product.destacado == true)
+        res.render('home', {products: response});
     },
     // register: (req, res) =>{
     //      return res.render('registro');

@@ -54,10 +54,14 @@ header{
 }
 
 .homeTitle {
+    text-decoration: dashed;
     text-align: center;
     font-size: 15px;
-    
- 
+    background: lavender;
+    border-radius: 5px;
+    color: cadetblue;
+    font-family: monospace;
+    font-style: oblique;
 }
 
 header .contenedor{
@@ -86,6 +90,11 @@ section{
     height: 180px;
     
 }  
+
+footer {
+    background-color: lavender;
+    border-radius: 3px;
+}
 footer .contenedor{
     display: flex;
     
@@ -105,7 +114,18 @@ footer input{
     font-size: 30px;
 
 }
+.newsletter {
+    background: cadetblue;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 5px;
+    color: cornsilk;
+}
 
+.direccion {
+    color: seagreen;
+    padding: 5px;
+}
 footer .direccion, .newsletter{
     margin: 15px;
     

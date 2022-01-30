@@ -15,6 +15,34 @@
             </figure>
         </div>
     </main>
+    <h3 class="homeTitle">SEGÚN TU ÚLTIMA VISITA</h3>
+    <section class="productosOferta">
+        <div class="container">
+            <% products.forEach(product => { %>
+             
+                <div class="card">
+                    <img src="<%= product.images %> ">
+                    <h4><%= product.name %> Acer TravelMate</h4>
+                    <p><%= product.price %></p>
+                    <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
+                    <a href="/products/ <%= product.id %>">Mas Info</a>
+                </div>
+            <% }) %>
+    </section>
+    <h3 class="homeTitle">PRODUCTOS EN OFERTA</h3>
+    <section class="productosOferta">
+        <div class="container">
+            <% products.forEach(product => { %>
+             
+                <div class="card">
+                    <img src="<%= product.images %> ">
+                    <h4><%= product.name %> Acer TravelMate</h4>
+                    <p><%= product.price %></p>
+                    <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
+                    <a href="/products/ <%= product.id %>">Mas Info</a>
+                </div>
+            <% }) %>
+    </section>
     <%- include ('./partials/footer.ejs') %>
 </body>
 
