@@ -80,7 +80,7 @@ body{
 }
 
 .container .card{
-	background: #D5DBDB;
+	background-color: #eeeeeee8;
     width: 330px;
     height: 430px;
     border-radius: 8px;

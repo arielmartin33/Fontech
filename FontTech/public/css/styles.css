@@ -57,9 +57,10 @@ header{
     text-decoration: dashed;
     text-align: center;
     font-size: 15px;
-    background: lavender;
+    background: black;
+    opacity: 0.7;
     border-radius: 5px;
-    color: cadetblue;
+    color: white;
     font-family: monospace;
     font-style: oblique;
 }
@@ -171,5 +172,11 @@ footer button{
     }
     .newsletter{
         margin-top:70px;
+    }
+    body{
+        background-image: url('../img/logo/fondo-productos.jpg');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        background-attachment: fixed;
     }
 }
