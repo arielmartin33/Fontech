@@ -6,9 +6,21 @@
     flex-direction: column;
     margin-top: 60px;
 }
-
+main{
+    margin-top: 65px;
+}
 .h3{
     width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+
+}
+.pagos h5{
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
 }
 .producto-imgs{
   
@@ -40,13 +52,14 @@
 
 .descripcion-producto{
     font-size: 20px;
-    line-height: 30px;}
+    line-height: 30px;
+}
 
 .descripcion-producto {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 15px;
-    background:rgb(183, 185, 181);
+    background:#f5f5f5;
 }
 .descripcion-producto h2{
    
@@ -71,6 +84,8 @@ font-family: 'viga';
 font-size: 15px;
 cursor: pointer;
 width: 100%;
+background-color: rgb(24 239 60 / 96%);
+margin: 30px;
 }
 .contenedor-producto button:hover{
 color: rgb(82, 126, 126);
