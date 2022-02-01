@@ -39,11 +39,38 @@ const controller = {
             image: req.file.filename
         }
         User.create(userToCreate);
-        return res.redirect('userLoginForm');
+        return res.render('userLoginForm');
     },
 
     login: (req, res) => {
         res.render('userLoginForm');
+    },
+
+    loginProcess: (req, res) => {
+
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if (userToLogin){
+            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (passwordOk){
+                return res.send('puedes ingresar');
+            }
+            return res.render('userLoginForm', {
+                errors: {
+                    errors: {
+                        msg: 'las credenciales no son validas'
+                    }
+                }
+            });
+
+        }
+        return res.render('userLoginForm', {
+            errors: {
+                errors: {
+                    msg: 'el mail no existe'
+                }
+            }
+        });
     },
     
     profile: (req, res) => {

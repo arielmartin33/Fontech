@@ -16,5 +16,41 @@
   "password": "$2a$10$qSadb1J20QkPjvz9BlwRC.S135MEHSh0aZqVm7Z7VuAoErWNNiIlG",
   "repassword": "123",
   "image": "1643685434683_img.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "ruben",
+  "apellido": "martin",
+  "email": "arielmartin33@gmail.com",
+  "password": "$2a$10$LORXy1o1vdSOc0JosXT7ceYi6GVtWNeYVruZ.8VABihunC6amJsnC",
+  "repassword": "1234",
+  "image": "1643691984323_img.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Ruben Ariel",
+  "apellido": "Martin",
+  "email": "arielmartin44@gmail.com",
+  "password": "$2a$10$y/6Klb0TsRAvpnIp.baTAu/AUniAjbPDbNJRdtX/lxtOQcSdsHQ8m",
+  "repassword": "123",
+  "image": "1643692118488_img.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "juan",
+  "apellido": "perez",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$oo9zDApabr13O/FEIK5MUe4BjxrktPC1.oGknCcG0BXSH8OyM/2b.",
+  "repassword": "123",
+  "image": "1643692331772_img.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "pedro",
+  "apellido": "pablo",
+  "email": "arielmartin45@gmail.com",
+  "password": "$2a$10$szKj1SkcJWMqHgwC/CtR0ON9maRcoEa.8GcGZpNeKC.804OhGvltO",
+  "repassword": "123",
+  "image": "1643692588572_img.jpg"
  }
 ]

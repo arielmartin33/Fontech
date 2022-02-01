@@ -49,8 +49,12 @@ router.get('/register', userController.register);
 
 router.post('/register', uploadFile.single('image'), validation, userController.processRegister);
 
-// Formulario de logino
+// Formulario de login
 router.get('/login', userController.login);
+
+//Proceso de login
+
+router.post('/login', userController.loginProcess);
 
 
 // perfil de Usuario

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<body>
+    <div class="container-all centrado" id="modal">
+
+        <div class="contenedor-text">
+
+            <!-- <div id="social-login"> -->
+            <h1>Iniciar Sesión con...</h1>
+            <!-- </div> -->
+            <div class="social-login-elemento">
+                <div>
+                    <img src="../img/google.svg" alt="">
+                    <span>Google</span>
+                </div>
+                <div>
+                    <img src="../img/facebook.svg" alt="">
+                    <span>Facebook</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <form action="/user/login" method="post" class="inputs-container">
+                <p>O</p>
+                <input type="text" name="email" placeholder="E-mail">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="error">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                <input class="password" type="password" name="password" placeholder="Contaseña">
+                <button class="btn-login">Login</button>
+            </form>
+        </div>
+        <div class="columna">
+            <a href="#">
+                <p>¿Olvidaste tu contraseña? </p>
+            </a>
+            <!-- <button class="btn-click">Hace click aca</button> -->
+        </div>
+        <div class="columna">
+            <a href="/user/register">
+                <p>¿Aún no tenes cuenta? </p>
+            </a>
+            <!-- <button class="btn-crea-tu-cuenta"><a href='registro'>Crea tu cuenta</a></button> -->
+        </div>
+        <a href="#" class="btn-close-popup">X</a>
+    </div>
+</body>
+</html>

@@ -36,12 +36,15 @@
             </div>
 
             <div class="formulario">
-                <form class="inputs-container">
+                <form action="/user/login" method="post" class="inputs-container">
                     <p>O</p>
-                    <input class="mail" type="email" placeholder="E-mail">
-                    <input class="password" type="password" placeholder="Contaseña">
+                    <input class="mail" type="email" name="email" placeholder="E-mail">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="error"><%= errors.email.msg %> </div>
+                    <% } %>
+                    <input class="password" type="password" name="password" placeholder="Contaseña">
+                    <button class="btn-login">Login</button>
                 </form>
-                <button class="btn-login">Login</button>
             </div>
             <div class="columna">
                 <a href="#">
