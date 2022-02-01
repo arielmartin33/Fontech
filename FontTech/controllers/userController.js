@@ -1,29 +1,32 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../data/usersDB.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-const userController = {
-    index: (req, res) => {
-        res.render('registro');
-    },
+const controller = {
     register: (req, res) => {
-        res.render('registro');
+        return res.render('userRegisterForm');
     },
-    store: (req, res) => {
-        let newUser = {
-            id: users[users.length -1].id + 1,
-            ...req.body
+
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req);
+
+        //resultValidation es un objeto literal que tiene la propiedad errors
+        if (resultValidation.errors.length > 0) {
+            return res.render('userRegisterForm', {
+            //devuelve un objeto literarl con la propiedad name y a su vez con todas las caracteristicas
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
         }
-        console.log(req);
-        users.push(newUser);
-        const jsonUsers = JSON.stringify(users);
-        fs.writeFileSync(usersFilePath, jsonUsers, 'utf-8');
-        res.render('/');
+        return res.send('ok, paso la validacion');
     },
-    detail: (req, res) => {
-        res.render('/');
-    }
+
+    login: (req, res) => {
+        res.render('userLoginForm');
+    },
+    
+    profile: (req, res) => {
+        res.render('userProfile');
+    },
 }
-module.exports = userController;
+module.exports = controller;

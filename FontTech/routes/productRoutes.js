@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-
 const productsController = require('../controllers/productsController');
 
 // ******** Listado de productos ************
@@ -14,8 +13,9 @@ router.get('/:id', productsController.detail),
 
 // ********* Crear un nuevo producto ********
 
-router.get('/product-create/', productsController.create);
-router.post('/', productsController.create);
+router.get('/create', productsController.create);
+console.log(router.get);
+// router.post('/', productsController.create);
 
 // ******** Editar un producto ********
 router.get('/:id/edit', productsController.edit);

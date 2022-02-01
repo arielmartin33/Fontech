@@ -1,27 +1,59 @@
 const express = require('express');
 const router = express.Router();
-const { body } = require('express-validator');
 const userController = require('../controllers/userController');
+const multer = require('multer');
+const path = require('path');
+const { body } = require('express-validator');
 
-const validateUserForm = [
-    body('nombre').notEmpty().withMessage('Debe ingresar un nombre'),
-    body('apellido').notEmpty().withMessage('Debe ingresar un apellido'),
-    body('email').isEmail().withMessage('Debe ingresar un email válido'),
-    body('password').trim().isLength({ min: 6}).withMessage('El password debe contener al menos 6 caracteres')
-];
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './public/img');
+    },
+    filename: (req, file, cb) => {
+        let filename = `${Date.now()}_img${path.extname(file.originalname)}`;
+        cb(null, filename);
+    }
+})
+
+const uploadFile = multer({ storage});
+
+const validation = [
+    body('nombre').notEmpty().withMessage('Debese ingresar un nombre'),
+    body('apellido').notEmpty().withMessage('Debese ingresar un apellido'),
+    body('email').notEmpty().withMessage('Debese ingresar una dirección de correo').bail()
+    .isEmail().withMessage('Debese ingresar un formato mail valido'),
+    body('password').notEmpty().withMessage('Debese ingresar una contraseña'),
+    body('image').custom((value, {req }) => {
+        let file = req.file;
+        let acceptExtensions = ['.jpg', '.png', '.gif'];
+        
+        if (!file){
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptExtensions.includes(fileExtension)){
+                throw new Error(`Las extensiones de archivos permitidas son: ${acceptExtensions.join(', ')}`);
+            }
+        }
+
+        return true;
+    })
+]
+
 // Todos los usuarios
 
-router.get('/', userController.index);
+router.get('/register', userController.register);
 
-// Creacion de usuarios
 
-router.get('/registro', userController.register);
+// Procesar Registro
 
-// Almaccenamiento de usuario
+router.post('/register', uploadFile.single('image'), validation, userController.processRegister);
 
-router.post('/', userController.store);
+// Formulario de logino
+router.get('/login', userController.login);
 
-// Detalle de Usuario
-router.get('/', userController.detail)
+
+// perfil de Usuario
+router.get('/profile/:userId', userController.profile);
 
 module.exports = router;

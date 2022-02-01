@@ -8,3 +8,6 @@ Se ingreso en la pagina/favicon.ico
 Se ingreso en la pagina/carrito
 Se ingreso en la pagina/producto/carrito
 Se ingreso en la pagina/carrito
+Se ingreso en la pagina/registro
+Se ingreso en la pagina/registro
+Se ingreso en la pagina/carrito
