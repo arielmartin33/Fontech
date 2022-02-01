@@ -11,3 +11,6 @@ Se ingreso en la pagina/carrito
 Se ingreso en la pagina/registro
 Se ingreso en la pagina/registro
 Se ingreso en la pagina/carrito
+Se ingreso en la pagina/user/userLoginForm
+Se ingreso en la pagina/user/userLoginForm
+Se ingreso en la pagina/user/userLoginForm
