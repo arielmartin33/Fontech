@@ -15,7 +15,7 @@ const controller = {
         //resultValidation es un objeto literal que tiene la propiedad errors
         if (resultValidation.errors.length > 0) {
             return res.render('userRegisterForm', {
-            //devuelve un objeto literarl con la propiedad name y a su vez con todas las caracteristicas
+            //devuelve un objeto literal con la propiedad name y a su vez con todas las caracteristicas
             errors: resultValidation.mapped(),
             oldData: req.body
         });

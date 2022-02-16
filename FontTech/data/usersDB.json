@@ -52,5 +52,14 @@
   "password": "$2a$10$szKj1SkcJWMqHgwC/CtR0ON9maRcoEa.8GcGZpNeKC.804OhGvltO",
   "repassword": "123",
   "image": "1643692588572_img.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Ruben Ariel",
+  "apellido": "Martin",
+  "email": "arielmarti33@gmail.com",
+  "password": "$2a$10$78Cu0IKOgs3OuMn2JlIBx.IrGUI29sw1ZnigGudLtkqQFlz3VAN4S",
+  "repassword": "123",
+  "image": "1645010817303_img.jpg"
  }
 ]
