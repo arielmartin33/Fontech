@@ -1,65 +1,11 @@
 [
  {
   "id": 1,
-  "nombre": "juan",
-  "apellido": "perez",
-  "email": "ariel889@hotmail.com",
-  "password": "$2a$10$WaUjUO2ZC1awxwhDMksRDeAJq0Bom28RgTWpJi3eMWRmMoJZntF9u",
-  "repassword": "123",
-  "image": "1643685394832_img.jpg"
- },
- {
-  "id": 2,
-  "nombre": "pedro",
-  "apellido": "picapiedras",
-  "email": "ariel889@gmail.com",
-  "password": "$2a$10$qSadb1J20QkPjvz9BlwRC.S135MEHSh0aZqVm7Z7VuAoErWNNiIlG",
-  "repassword": "123",
-  "image": "1643685434683_img.jpg"
- },
- {
-  "id": 3,
-  "nombre": "ruben",
-  "apellido": "martin",
+  "nombre": "Ruben Ariel",
+  "apellido": "Martin",
   "email": "arielmartin33@gmail.com",
-  "password": "$2a$10$LORXy1o1vdSOc0JosXT7ceYi6GVtWNeYVruZ.8VABihunC6amJsnC",
-  "repassword": "1234",
-  "image": "1643691984323_img.jpg"
- },
- {
-  "id": 4,
-  "nombre": "Ruben Ariel",
-  "apellido": "Martin",
-  "email": "arielmartin44@gmail.com",
-  "password": "$2a$10$y/6Klb0TsRAvpnIp.baTAu/AUniAjbPDbNJRdtX/lxtOQcSdsHQ8m",
+  "password": "$2a$10$zyZpDACwkEE.Y5pptv6fjOUutbWECz.SdnP5HbeeUPWsqjlcNfRsm",
   "repassword": "123",
-  "image": "1643692118488_img.jpg"
- },
- {
-  "id": 5,
-  "nombre": "juan",
-  "apellido": "perez",
-  "email": "juan@gmail.com",
-  "password": "$2a$10$oo9zDApabr13O/FEIK5MUe4BjxrktPC1.oGknCcG0BXSH8OyM/2b.",
-  "repassword": "123",
-  "image": "1643692331772_img.jpg"
- },
- {
-  "id": 6,
-  "nombre": "pedro",
-  "apellido": "pablo",
-  "email": "arielmartin45@gmail.com",
-  "password": "$2a$10$szKj1SkcJWMqHgwC/CtR0ON9maRcoEa.8GcGZpNeKC.804OhGvltO",
-  "repassword": "123",
-  "image": "1643692588572_img.jpg"
- },
- {
-  "id": 7,
-  "nombre": "Ruben Ariel",
-  "apellido": "Martin",
-  "email": "arielmarti33@gmail.com",
-  "password": "$2a$10$78Cu0IKOgs3OuMn2JlIBx.IrGUI29sw1ZnigGudLtkqQFlz3VAN4S",
-  "repassword": "123",
-  "image": "1645010817303_img.jpg"
+  "image": "1645054960842_img.jpg"
  }
 ]
