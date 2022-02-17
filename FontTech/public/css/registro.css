@@ -32,11 +32,22 @@ form{
     width: 150px;
     margin-top: 5px;
 }
+.error{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.63);
+    font-size: 15px;
+    border: dotted 3px rgba(255, 0, 0, 0.671);
+    
+}
+
 
 @media screen and (min-width: 768px){
     .formularioR input{
       width: 350px;
        
+    }
+    .error{
+        width: 350px;
     }
 
 }

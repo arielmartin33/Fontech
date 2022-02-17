@@ -43,7 +43,7 @@ const controller = {
     },
 
     login: (req, res) => {
-        res.redirect('userLoginForm');
+        res.render('userLoginForm');
     },
 
     loginProcess: (req, res) => {
