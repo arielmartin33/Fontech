@@ -48,16 +48,25 @@ const controller = {
 
     loginProcess: (req, res) => {
 
+        
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin){
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (passwordOk){
-                return res.send('puedes ingresar');
+                delete userToLogin.password; // borro el password por seguridad
+                delete userToLogin.repassword;
+                req.session.userLogged = userToLogin;
+                
+                if (req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                }
+                
+                return res.redirect('/user/profile');
             }
             return res.render('userLoginForm', {
                 errors: {
-                    errors: {
+                    email: {
                         msg: 'las credenciales no son validas'
                     }
                 }
@@ -66,7 +75,7 @@ const controller = {
         }
         return res.render('userLoginForm', {
             errors: {
-                errors: {
+                email: {
                     msg: 'el mail no existe'
                 }
             }
@@ -74,7 +83,17 @@ const controller = {
     },
     
     profile: (req, res) => {
-        res.render('userProfile');
+
+        res.render('userProfileForm', {
+            user: req.session.userLogged
+        });
+
     },
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        res.redirect('/');
+
+    }
 }
 module.exports = controller;

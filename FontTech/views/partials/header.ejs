@@ -10,11 +10,28 @@
             <a href="">Contacto</a>
             <a href="">Empresa</a>
         </nav>
+        <nav class="user">
+            <ul>
+                <% if (locals.isLogged) { %>
+                <li>
+                    <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius:100%;">
+                    <a href="/user/profile">Perfil</a>
+                </li>
+                <li>
+                    <a href="/user/logout">Cerrar Sesion</a>
+                </li>
+                <% } else { %>
+                <li>
+                    <a href="/user/login">Ingresar</a>
+                </li>
+                <a href="/user/register">Registrarse</a>
+                <% } %> 
+            </ul>
+        </nav>
         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
-        
+         
 
-        <a href="/user/login"><i class="fas fa-user"></i></a>
         
    
 </header>
