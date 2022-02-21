@@ -15,6 +15,8 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url('../img/fondo.png');
+
     background-color: white;
     font-family: 'Viga', sans-serif;
     padding: 5px;
@@ -130,7 +132,7 @@ footer input{
 }
 
 .direccion {
-    color: seagreen;
+    color: rgb(53, 65, 58);
     padding: 5px;
 }
 footer .direccion, .newsletter{
@@ -186,7 +188,6 @@ footer button{
         margin-top:70px;
     }
     body{
-        background-image: url('../img/logo/fondo-productos.jpg');
         background-repeat: no-repeat;
         background-size: 100vw;
         background-attachment: fixed;
