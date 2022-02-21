@@ -1,6 +1,44 @@
 <%- include ('./partials/head.ejs') %>
-<%- include ('./partials/header.ejs') %>
-<div class="container" style="margin-top: 40px;">
+<!-- <%- include ('./partials/header.ejs') %> -->
+
+<header>
+    <div class="contenedor">
+        <img src="../img/Logo.png" alt="">
+        <input type="checkbox" id="menu-bar">
+        <label class="fas fa-bars" for="menu-bar"></label>
+
+        <nav class="menu">
+            <a href="/user/profile">Perfil</a>
+            <a href="/user/logout">Cerrar Sesion</a>
+          
+
+        </nav>
+        
+        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+
+         
+   
+</header>
+
+
+<div class="containerUser" style="margin-top: 50px;">
+
+    <nav class="user">
+        <ul>
+            <% if (locals.isLogged) { %>
+            <li>
+                <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius:100%;">
+               
+            </li>
+            
+            <% } else { %>
+            <li>
+                <a href="/user/login">Ingresar</a>
+            </li>
+            <a href="/user/register">Registrarse</a>
+            <% } %> 
+        </ul>
+    </nav>
     <div class="row">
         <div class="col-md-3">
             <h2>Hola <%= user.nombre %> </h2>
@@ -11,3 +49,5 @@
         </div>
     </div>
 </div>
+
+<%- include ('./partials/footer.ejs') %>

@@ -7,5 +7,14 @@
   "password": "$2a$10$zyZpDACwkEE.Y5pptv6fjOUutbWECz.SdnP5HbeeUPWsqjlcNfRsm",
   "repassword": "123",
   "image": "1645054960842_img.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "tatiana",
+  "apellido": "Acuña",
+  "email": "tatiana.24@live.com.ar",
+  "password": "$2a$10$AQ5BT1P2gNDXEvjo410Wc./CQK6b25LVQKpWrdUnlIiwkGJu7IRdW",
+  "repassword": "Salome1004",
+  "image": "1645396328846_img.jpg"
  }
 ]

@@ -1,0 +1,20 @@
+.containerUSer{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row img{
+    width: 50%;
+    height: 50%;
+  
+}
+.menu {
+    height: 50px;
+}
+.col-md-3{
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}

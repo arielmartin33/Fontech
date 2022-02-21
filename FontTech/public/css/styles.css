@@ -6,6 +6,7 @@
  @import url(carrito.css);
  @import url(producto.css);
  @import url(login.css);
+ @import url(userProfileForm.css);
 
  
  *{
@@ -32,15 +33,17 @@ header{
   
     
 }
+.fa-shopping-cart{
+    float: right;
+}
 
 .fa-bars{
     color: rgba(22, 22, 22, 0.7);
 }
-.fa-user, .fa-shopping-cart{
+.fa-user, .fa-shopping-cart, .fa-id-card {
     color: rgba(22, 22, 22, 0.7);
     font-size: 30px;
     margin: 5px;
-    float: right;
     margin-top: 10px;
     
 }
@@ -82,20 +85,22 @@ section{
     background-color: #fff; 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between
     
 }
 
 #productos .contenedor img{
     margin: 10px;
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
     
 }  
 
 footer {
     background-color: lavender;
     border-radius: 3px;
+    margin-top: 15px;
 }
 footer .contenedor{
     display: flex;
@@ -141,8 +146,13 @@ footer button{
 }
 
 @media (min-width:1024px){
-    .contenedor{
+ 
+    footer .contenedor{
         width: 100%;
+          
+    }
+    .contenedor a{
+        font-size: 20px;
     }
     .fa-bars{
         display: none;
@@ -153,11 +163,10 @@ footer button{
             margin-bottom: 30px;
     }
     .container .card a {
-
         font-size: 20px;
     }
     footer .contenedor {
-       padding: 90px;
+       
        display: inline-flex;
        justify-content: space-evenly;
     }
@@ -170,6 +179,8 @@ footer button{
 @media (min-width:768px){
     footer .contenedor{
         font-size: 15px;
+        display: flex;
+        flex-wrap: inherit;
     }
     .newsletter{
         margin-top:70px;

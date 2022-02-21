@@ -1,158 +1,155 @@
-.contenedor-producto{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 60px;
+.contenedor-producto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
 }
-main{
-    margin-top: 65px;
-}
-.h3{
-    width: 100%;
-    background-color: black;
-    opacity: 0.7;
-    color: white;
+#productos{
 
 }
-.pagos h5{
-    width: 100%;
-    background-color: black;
-    opacity: 0.7;
-    color: white;
+main {
+  margin-top: 65px;
 }
-.producto-imgs{
-  
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
+.h3 {
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
 }
-
-
-.img-principal img{
-    width: 100%;  
-    border: 3px solid rgb(78, 77, 77);
-    padding: 30px;
-    
+.pagos h5 {
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
 }
-.img-secundaria img{
-    width: 50%;
-    border: 2px solid rgb(78, 77, 77);
-    cursor: pointer;
-    margin: 3px;
-    
-    
+.producto-imgs {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
 }
 
-.img-secundaria{
-    display: flex;
-    justify-content: space-around;
+.img-principal img {
+  width: 100%;
+  border: 3px solid rgb(78, 77, 77);
+  padding: 30px;
+}
+.img-secundaria img {
+  width: 50%;
+  border: 2px solid rgb(78, 77, 77);
+  cursor: pointer;
+  margin: 3px;
 }
 
-.descripcion-producto{
-    font-size: 20px;
-    line-height: 30px;
+.img-secundaria {
+  display: flex;
+  justify-content: space-around;
 }
 
 .descripcion-producto {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.descripcion-producto {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: #f5f5f5;
+}
+.descripcion-producto h2 {
+  margin-bottom: 25px;
+}
+.descripcion-producto p {
+  font-family: sans-serif;
+  text-align: center;
+}
+.pagos {
+  text-align: center;
+}
+.pagos img {
+  width: 100%;
+}
+.contenedor-producto button {
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "viga";
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgb(24 239 60 / 96%);
+  margin: 30px;
+}
+.contenedor-producto button:hover {
+  color: rgb(82, 126, 126);
+}
+.btn-producto {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
+  .producto-imgs {
+    padding: 50px;
+  }
+  .contenedor-producto {
+    margin-top: 88px;
+    font-size: 30px;
+  }
+  .contenedor-producto button {
+    font-size: 30px;
+    width: 50%;
+  }
+  .descripcion-producto {
+    padding: 30px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 15px;
-    background:#f5f5f5;
-}
-.descripcion-producto h2{
-   
-    margin-bottom: 25px;
-}
-.descripcion-producto p {
-   
-    font-family: sans-serif;
+    background: rgb(183, 185, 181);
+  }
+  .btn-producto {
     text-align: center;
-}
-.pagos{
-    text-align: center;
-  
-}
-.pagos img{
-    width: 100%;
-}
-.contenedor-producto button{ 
-padding: 10px;
-border-radius: 20px;
-font-family: 'viga';
-font-size: 15px;
-cursor: pointer;
-width: 100%;
-background-color: rgb(24 239 60 / 96%);
-margin: 30px;
-}
-.contenedor-producto button:hover{
-color: rgb(82, 126, 126);
-
-
-}
-.btn-producto{
-    width: 100%;
+    margin-top: 30px;
+  }
+  .pagos {
+    margin-top: 30px;
+  }
+  .pagos img {
+    margin-top: 30px;
+  }
 }
 
+@media screen and (min-width: 1024px) {
+    
+  .container{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .contenedor-producto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+  }
+  .h3 {
+    margin-left: 20px;
+  }
 
-@media screen and (min-width: 768px){
-    .producto-imgs{
-        padding: 50px;
-    }
-    .contenedor-producto{
-        margin-top: 88px;
-        font-size: 30px;
-    }
-    .contenedor-producto button{
-    font-size: 30px;
+  .escritorio {
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    
-    }
-    .descripcion-producto{
-        padding: 30px;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        background:rgb(183, 185, 181);
-        
-    }
-    .btn-producto{
-        text-align: center;
-        margin-top: 30px;
-    }
-    .pagos{
-        margin-top: 30px;
-    }
-    .pagos img{
-        margin-top: 30px;
-    }
-}
-
-   
-@media screen and (min-width: 1024px){
-    .contenedor-producto{
-        display: flex;
-        flex-direction: row;
-        /* flex-wrap: wrap; */
-    }
-    .h3{
-        margin-left: 20px;
-    }
-    
-    .escritorio{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
-    .descripcion-producto{
-        margin-top: 165px;
+  }
+  .descripcion-producto {
+    margin-top: 165px;
     width: 100%;
     font-size: 22px;
-    }
-    .pagos{
-        margin-bottom: 30px;
-    }
-   
+  }
+  .pagos {
+    margin-bottom: 30px;
+  }
 }
