@@ -7,14 +7,15 @@ const productsController = require('../controllers/productsController');
 
 router.get('/', productsController.index);
 
-// ********* Seleccionar un producto *********
-
-router.get('/:id', productsController.detail),
-
 // ********* Crear un nuevo producto ********
 
 router.get('/create', productsController.create);
 // router.post('/', productsController.create);
+
+// ********* Seleccionar un producto *********
+router.get('/:id', productsController.detail),
+
+
 
 // ******** Editar un producto ********
 router.get('/:id/edit', productsController.edit);

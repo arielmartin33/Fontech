@@ -15,9 +15,8 @@ const controller = {
         const productSelected = products.filter(product => product.id == id);
         res.render('product-detail', {productSelected});
     },
-
     create: (req, res) => {
-        res.render('product-create');
+        res.render('productCreate');
     },
     store: (req, res) =>{
         res.send('guardo en el json el producto');
