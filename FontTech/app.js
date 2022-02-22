@@ -18,10 +18,6 @@ app.use(cookies());
 
 app.use(userLoggedMiddleware);
 
-const logMiddleware = require('./middlewares/logMiddleware');
-
-
-
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: false }));
 
@@ -36,7 +32,6 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/user', userRoutes);
-app.use(logMiddleware);
 
 app.listen('3500',()=> console.log('Servidor corriendo en puerto 3500'));
 
