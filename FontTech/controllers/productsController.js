@@ -13,7 +13,6 @@ const controller = {
     detail: (req, res) => {
         const id = req.params.id;
         const productSelected = products.filter(product => product.id == id);
-        console.log(productSelected);
         res.render('product-detail', {productSelected});
     },
 

@@ -3,13 +3,24 @@
         <img src="../img/Logo.png" alt="">
         <input type="checkbox" id="menu-bar">
         <label class="fas fa-bars" for="menu-bar"></label>
+        
 
         <nav class="menu">
-            <a href="/user/login">Ingresar<i class="fas fa-user"></i></a></a>
-            <a href="/user/register">Registrate<i class="fas fa-id-card"></i></a>            <a href="/products">Productos</a>
-            <a href="">Sucursales</a>
-            <a href="">Contacto</a>
-            <a href="">Empresa</a>
+            <% if (locals.isLogged) { %>
+                    <a href="/user/profile"><img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius:100%;"></a>
+                    <p><%= locals.userLogged.nombre %> </p>
+                    <a href="/products">Productos</a>
+                    <a href="">Sucursales</a>
+                    <a href="">Contacto</a>
+                    <a href="">Empresa</a>
+                <% } else { %>
+                    <a href="/user/login">Ingresar<i class="fas fa-user"></i></a></a>
+                    <a href="/user/register">Registrate<i class="fas fa-id-card"></i></a> 
+                    <a href="/products">Productos</a>
+                    <a href="">Sucursales</a>
+                    <a href="">Contacto</a>
+                    <a href="">Empresa</a>          
+                <% } %> 
         </nav>
         
         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
