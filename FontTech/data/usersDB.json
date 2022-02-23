@@ -25,5 +25,14 @@
   "password": "$2a$10$jXLQTJSHcyVRmTkcHwiKh..9JQQMzX54B1SWiOotDx307wOHP/to6",
   "repassword": "123",
   "image": "1645574262997_img.png"
+ },
+ {
+  "id": 4,
+  "nombre": "juan",
+  "apellido": "martin",
+  "email": "arielmartin33@hotmail.com",
+  "password": "$2a$10$ZLoRQ/WPiR.O/Y7ctgSbe.JQWCcxeyIT3fb8/wQEQDoC88zHcQ8LS",
+  "repassword": "123",
+  "image": "1645642656555_img.jpg"
  }
 ]

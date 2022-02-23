@@ -23,10 +23,13 @@ const controller = {
         let newProduct = {
             id: products[products.length -1].id + 1,
             ...req.body,
-            image: req.file.filename
+            images:req.files.map(function (file) {
+                return file.filename;
+            })
         }
+        console.log(newProduct);
         Product.create(newProduct);
-        res.render('products');
+        res.render('products',{products});
 
     },
     edit: (req, res) => {
