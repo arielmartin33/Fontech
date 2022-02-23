@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Product = require('../models/Product')
 
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -19,16 +20,30 @@ const controller = {
         res.render('productCreate');
     },
     store: (req, res) =>{
-        res.send('guardo en el json el producto');
+        let newProduct = {
+            id: products[products.length -1].id + 1,
+            ...req.body,
+            image: req.file.filename
+        }
+        Product.create(newProduct);
+        res.render('products');
+
     },
     edit: (req, res) => {
-        res.send('edicion del producto');
+        let idProduct = req.params.id;
+        let productToEdit = Product.findByPk(idProduct)
+        res.render('productEdit', {productToEdit});
     },
     update: (req, res)=> {
-        res.send('actualizo el producto editado');
+        req.body.id = req.params.id;
+        /* Si adjunta una imagen la guardamos, si no, mantenemos la imagen anterior */
+        req.body.image = req.file ? req.file.filename : req.body.oldImage;
+        Product.update(req.body);
+        res.redirect('/products/' + req.params.id);
     },
-    destroy: (req, res)=>{
-        res.send('elimino producto seleccionado');
+    delete: (req, res)=>{
+        Product.destroy(req.params.id)
+        res.redirect('/products');
     }
 
 };
