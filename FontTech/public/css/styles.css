@@ -72,7 +72,17 @@ header{
 }
 
 header .contenedor{
-    display: table;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.barraUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.barraA {
+    display: none;
 }
 
 section{
@@ -192,4 +202,15 @@ footer button{
         background-size: 100vw;
         background-attachment: fixed;
     }
+    .barraUsuario {
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+    }
+    .barraA{
+        display: block;
+        padding: 5px;
+        text-decoration:auto ;
+    }
+    
 }

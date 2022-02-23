@@ -16,5 +16,14 @@
   "password": "$2a$10$AQ5BT1P2gNDXEvjo410Wc./CQK6b25LVQKpWrdUnlIiwkGJu7IRdW",
   "repassword": "Salome1004",
   "image": "1645396328846_img.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Sandra",
+  "apellido": "Ruiz",
+  "email": "sandrarosanaruiz3@gmail.com",
+  "password": "$2a$10$jXLQTJSHcyVRmTkcHwiKh..9JQQMzX54B1SWiOotDx307wOHP/to6",
+  "repassword": "123",
+  "image": "1645574262997_img.png"
  }
 ]
