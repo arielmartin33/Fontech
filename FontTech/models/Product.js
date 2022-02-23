@@ -49,8 +49,19 @@ const Product = {
         fs.writeFileSync(this.fileName, JSON.stringify(allProducts, null, ' '));
         return newProduct;
     },
-    delete: function (id) {
-        let allProduct = this.findAll();
+    update: function (product) {
+        let products = this.findAll();
+        let updatedProducts = products.map(currentProduct =>{
+            if (currentProduct.id == product.id){
+                return currentProduct = product;
+            }
+            return currentProduct;
+        });
+        fs.writeFileSync(this.fileName, JSON.stringify(updatedProducts, null, ' '));
+        return product.id;
+    },
+    destroy: function (id) {
+        let allProducts = this.findAll();
         let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalProducts, null, ' '));
         return true;

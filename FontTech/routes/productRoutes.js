@@ -23,6 +23,6 @@ router.put('/:id', productsController.update);
 
 // ********* Borrar un producto *******
 
-router.delete('/:id', productsController.destroy);
+router.delete('/:id', productsController.delete);
 
 module.exports = router;
