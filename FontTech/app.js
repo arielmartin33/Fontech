@@ -33,5 +33,8 @@ app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/user', userRoutes);
 
-app.listen('3800',()=> console.log('Servidor corriendo en puerto 3500'));
+const port = process.env.PORT || 3500;
+app.listen(port, ()=> {
+    console.log('servidor corriendo en puerto'+ port)
+});
 
