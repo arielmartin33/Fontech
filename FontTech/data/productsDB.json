@@ -1,79 +1,41 @@
 [
  {
   "id": 1,
-  "name": "Pectin",
-  "description": "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
-  "category": "BB&T Corporation",
-  "price": "$142014.21",
+  "name": "servidor",
+  "description": "servidor hp",
+  "category": "servidores",
+  "price": "50000",
+  "destacado": "Destacado",
   "images": [
-   "http://dummyimage.com/120x100.png/dddddd/000000",
-   "http://dummyimage.com/173x100.png/cc0000/ffffff",
-   "http://dummyimage.com/223x100.png/dddddd/000000"
-  ],
-  "destacado": true
+   "1646089266006_img.jpg",
+   "1646089266009_img.jpg",
+   "1646089266010_img.jpg"
+  ]
  },
  {
   "id": 2,
-  "name": "Oneshot Automatic Soap System",
-  "description": "interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
-  "category": "TrueCar, Inc.",
-  "price": "$239297.81",
+  "name": "Pc Gamer",
+  "description": "pc gamer agregar descrpcion",
+  "category": "desktop",
+  "price": "150000",
+  "destacado": "Destacado",
   "images": [
-   "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
-   "http://dummyimage.com/206x100.png/cc0000/ffffff",
-   "http://dummyimage.com/232x100.png/5fa2dd/ffffff"
-  ],
-  "destacado": true
+   "1646089652724_img.jpg",
+   "1646089652727_img.png",
+   "1646089652732_img.jpg"
+  ]
  },
  {
   "id": 3,
-  "name": "Iced Tea - Lemon, 460 Ml",
-  "description": "eros elementum pellentesque quisque porta volutpat erat quisque erat eros",
-  "category": "Invitation Homes Inc.",
-  "price": "$81256.39",
-  "images": [
-   "http://dummyimage.com/210x100.png/5fa2dd/ffffff",
-   "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
-   "http://dummyimage.com/114x100.png/5fa2dd/ffffff"
-  ],
-  "destacado": true
- },
- {
-  "id": 4,
-  "name": "Cucumber - Pickling Ontario",
-  "description": "lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu",
-  "category": "Matlin & Partners Acquisition Corporation",
-  "price": "$216773.33",
-  "images": [
-   "http://dummyimage.com/153x100.png/cc0000/ffffff",
-   "http://dummyimage.com/140x100.png/5fa2dd/ffffff",
-   "http://dummyimage.com/223x100.png/ff4444/ffffff"
-  ]
- },
- {
-  "id": 5,
-  "name": "Servidor DL 380 G11",
-  "description": "servidor hp para produccion",
-  "category": "Servidores",
-  "price": "150000",
+  "name": "Notebook",
+  "description": "notebook ",
+  "category": "notebook",
+  "price": "90000",
   "destacado": "Destacado",
   "images": [
-   "1645652372890_img.jpg",
-   "1645652372891_img.jpg",
-   "1645652372892_img.jpg"
-  ]
- },
- {
-  "id": 6,
-  "name": "Servidor DL 380 G11",
-  "description": "servidor hp para produccion",
-  "category": "Servidores",
-  "price": "150000",
-  "destacado": "Destacado",
-  "images": [
-   "1645652379492_img.jpg",
-   "1645652379494_img.jpg",
-   "1645652379495_img.jpg"
+   "1646090720517_img.jpg",
+   "1646090720520_img.jpg",
+   "1646090720521_img.jpg"
   ]
  }
 ]

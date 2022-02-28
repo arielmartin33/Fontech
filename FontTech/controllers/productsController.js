@@ -27,9 +27,9 @@ const controller = {
                 return file.filename;
             })
         }
-        console.log(newProduct);
         Product.create(newProduct);
-        res.render('products',{products});
+        // res.render('products',{products});
+        res.redirect('products');
 
     },
     edit: (req, res) => {
