@@ -114,6 +114,7 @@ footer {
     background-color: lavender;
     border-radius: 3px;
     margin-top: 15px;
+    width: 100%;
 }
 footer .contenedor{
     display: flex;

@@ -37,5 +37,84 @@
    "1646090720520_img.jpg",
    "1646090720521_img.jpg"
   ]
+ },
+ {
+  "id": 4,
+  "name": "Samsung Monitor",
+  "description": "Samsung Monitor C27T550FDR 27´´ Full HD LED Curvo 75Hz",
+  "category": "desktop",
+  "price": "32628.99",
+  "destacado": "Destacado",
+  "images": [
+   "1646170546761_img.jpg",
+   "1646170546769_img.jpg",
+   "1646170546772_img.jpg"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "MSI Portátil Gaming",
+  "description": "MSI Portátil Gaming GP66 LEOPARD 11UH-465ES 15.6´´ i7-11800H/16GB/1TB SSD/RTX 3080",
+  "category": "notebook",
+  "price": "349113.49",
+  "destacado": "Destacado",
+  "images": [
+   "1646171482487_img.jpg",
+   "1646171482494_img.jpg",
+   "1646171482495_img.jpg"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Raidmax Gabinete Gamer",
+  "description": "Gabinete Gamer Raidmax X616tbf,Altura 42 cm, Ancho 22 cm, Largo 46 cm, Tipo de estructura Mid tower.",
+  "category": "desktop",
+  "price": "8.887",
+  "destacado": "Destacado",
+  "images": [
+   "1646172453488_img.jpeg",
+   "1646172453492_img.jpeg",
+   "1646172453495_img.jpeg"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Kingston Memoria Ram",
+  "description": "Memoria Ram Ddr4 16gb Kingston 2666mhz Cl16 Fury Beast Black",
+  "category": "desktop",
+  "price": "9.806",
+  "destacado": "Destacado",
+  "images": [
+   "1646175614660_img.jpg",
+   "1646175614664_img.jpg",
+   "1646175614667_img.jpg"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Radeon Placa De Video",
+  "description": "Placa De Video Rx 6600 Xt 8gb Ddr6. AMD Radeon™ Designed for 1080p Gamers",
+  "category": "desktop",
+  "price": "106.513",
+  "destacado": "Destacado",
+  "images": [
+   "1646176553814_img.jpeg",
+   "1646176553837_img.jpg",
+   "1646176553839_img.jpeg",
+   "1646176553997_img"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Lenovo All In One",
+  "description": "ALL IN ONE 3 LENOVO IDEA CENTRE 21.5\" RYZEN 3 4GB 256SSD W10H",
+  "category": "desktop",
+  "price": "97.717",
+  "destacado": "Destacado",
+  "images": [
+   "1646177917879_img.jpg",
+   "1646177917889_img.jpg",
+   "1646177917891_img.jpg"
+  ]
  }
 ]
