@@ -1,218 +1,205 @@
- @import url(menu.css);
- @import url(slider-tarjetas.css);
- @import url(popup.css);
- @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Viga&display=swap');
- @import url(registro.css);
- @import url(carrito.css);
- @import url(producto.css);
- @import url(login.css);
- @import url(userProfileForm.css);
- @import url(productCreate.css);
+@import url(menu.css);
+@import url(slider-tarjetas.css);
+@import url(popup.css);
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Viga&display=swap");
+@import url(registro.css);
+@import url(carrito.css);
+@import url(producto.css);
+@import url(login.css);
+@import url(userProfileForm.css);
+@import url(productCreate.css);
 
- 
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-image: url('../img/fondo.png');
+body {
+  background-image: url("../img/fondo.png");
 
-    background-color: white;
-    font-family: 'Viga', sans-serif;
-    padding: 5px;
+  background-color: white;
+  font-family: "Viga", sans-serif;
+  padding: 5px;
 }
-header{
-   
-    width:100%;
-    height: auto;
-    background: white;
-    
-    color: #fff;
-    position:fixed; 
-    top: 0;
-    left: 0;
-    z-index: 100;
-  
-    
+header {
+  width: 100%;
+  height: auto;
+  background: white;
+
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
-.fa-shopping-cart{
-    float: right;
+.fa-shopping-cart {
+  float: right;
 }
 
-.fa-bars{
-    color: rgba(22, 22, 22, 0.7);
+.fa-bars {
+  color: rgba(22, 22, 22, 0.7);
 }
-.fa-user, .fa-shopping-cart, .fa-id-card {
-    color: rgba(22, 22, 22, 0.7);
-    font-size: 30px;
-    margin: 5px;
-    margin-top: 10px;
-    
+.fa-user,
+.fa-shopping-cart,
+.fa-id-card {
+  color: rgba(22, 22, 22, 0.7);
+  font-size: 30px;
+  margin: 5px;
+  margin-top: 10px;
 }
-.contenedor{
-    width: 96%;
-    margin:auto;  
-  
+.contenedor {
+  width: 96%;
+  margin: auto;
 }
-.logo{
-    display: flex;
-    
+.logo {
+  display: flex;
 }
 
 .homeTitle {
-    text-decoration: dashed;
-    text-align: center;
-    font-size: 15px;
-    background: black;
-    opacity: 0.7;
-    border-radius: 5px;
-    color: white;
-    font-family: monospace;
-    font-style: oblique;
+  text-decoration: dashed;
+  text-align: center;
+  font-size: 15px;
+  background: black;
+  opacity: 0.7;
+  border-radius: 5px;
+  color: white;
+  font-family: monospace;
+  font-style: oblique;
 }
 
-header .contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+header .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .barraUsuario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .barraA {
-    display: none;
+  display: none;
 }
 
-section{
-    width: 100%;
-    
+section {
+  width: 100%;
 }
-#productos{
-    text-align: center;
-    margin-top: 50px;
+#productos {
+  text-align: center;
+  margin-top: 50px;
 }
-#productos .contenedor{
-    background-color: #fff; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between
-    
+#productos .contenedor {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#productos .contenedor img{
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-    
-}  
+#productos .contenedor img {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
 
 footer {
-    background-color: lavender;
-    border-radius: 3px;
-    margin-top: 15px;
-    width: 100%;
+  background-color: lavender;
+  border-radius: 3px;
+  margin-top: 15px;
+  width: 100%;
 }
-footer .contenedor{
-    display: flex;
-    
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-family: "viga", sans-serif;
-}
-footer p{
-    font-family: sans-serif;
-    line-height: 20px;
-}
-footer input{
-    width: 100%;
-    display: flex;
-    font-size: 30px;
+footer .contenedor {
+  display: flex;
 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-family: "viga", sans-serif;
+}
+footer p {
+  font-family: sans-serif;
+  line-height: 20px;
+}
+footer input {
+  width: 100%;
+  display: flex;
+  font-size: 30px;
 }
 .newsletter {
-    background: cadetblue;
-    opacity: 0.8;
-    padding: 20px;
-    border-radius: 5px;
-    color: cornsilk;
+  background: cadetblue;
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 5px;
+  color: cornsilk;
 }
 
 .direccion {
-    color: rgb(53, 65, 58);
-    padding: 5px;
+  color: rgb(53, 65, 58);
+  padding: 5px;
 }
-footer .direccion, .newsletter{
-    margin: 15px;
-    
+footer .direccion,
+.newsletter {
+  margin: 15px;
 }
-footer button{    
-    padding: 10px;
-    border-radius: 20px;
-    font-family: 'viga';
-    font-size: 15px;
-    cursor: pointer;
+.botonNewsletter {
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "viga";
+  font-size: 15px;
+  cursor: pointer;
 }
 
-@media (min-width:1024px){
- 
-    footer .contenedor{
-        width: 100%;
-          
-    }
-    .contenedor a{
-        font-size: 20px;
-    }
-    .fa-bars{
-        display: none;
-    }
-    .homeTitle{
-	        font-size: 30px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-    }
-    .container .card a {
-        font-size: 20px;
-    }
-    footer .contenedor {
-       
-       display: inline-flex;
-       justify-content: space-evenly;
-    }
+@media (min-width: 1024px) {
+  footer .contenedor {
+    width: 100%;
+  }
+  .contenedor a {
+    font-size: 20px;
+  }
+  .fa-bars {
+    display: none;
+  }
+  .homeTitle {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container .card a {
+    font-size: 20px;
+  }
+  footer .contenedor {
+    display: inline-flex;
+    justify-content: space-evenly;
+  }
 }
-@media (min-width:320px){
-    footer .contenedor{
-        flex-wrap: wrap;
-    }
+@media (min-width: 320px) {
+  footer .contenedor {
+    flex-wrap: wrap;
+  }
 }
-@media (min-width:768px){
-    footer .contenedor{
-        font-size: 15px;
-        display: flex;
-        flex-wrap: inherit;
-    }
-    .newsletter{
-        margin-top:70px;
-    }
-    body{
-        background-repeat: no-repeat;
-        background-size: 100vw;
-        background-attachment: fixed;
-    }
-    .barraUsuario {
-        display: flex;
-        align-self: flex-end;
-        flex-direction: row;
-    }
-    .barraA{
-        display: block;
-        padding: 5px;
-        text-decoration:auto ;
-    }
-    
+@media (min-width: 768px) {
+  footer .contenedor {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: inherit;
+  }
+  .newsletter {
+    margin-top: 70px;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-attachment: fixed;
+  }
+  .barraUsuario {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+  }
+  .barraA {
+    display: block;
+    padding: 5px;
+    text-decoration: auto;
+  }
 }
