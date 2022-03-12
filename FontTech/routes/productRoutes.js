@@ -11,19 +11,19 @@ router.get('/', productsController.index);
 // ********* Crear un nuevo producto ********
 
 router.get('/create', productsController.create);
-router.post('/', uploadImage.array('images'), productsController.store);
+router.post('/', uploadImage.single('images'), productsController.store);
 
-// ********* Seleccionar un producto *********
+// // ********* Seleccionar un producto *********
 router.get('/:id', productsController.detail),
 
 
 
-// ******** Editar un producto ********
-router.get('/:id/edit', productsController.edit);
-router.put('/:id', productsController.update);
+// // ******** Editar un producto ********
+// router.get('/:id/edit', productsController.edit);
+// router.put('/:id', productsController.update);
 
-// ********* Borrar un producto *******
+// // ********* Borrar un producto *******
 
-router.delete('/:id', productsController.delete);
+// router.delete('/:id', productsController.delete);
 
 module.exports = router;

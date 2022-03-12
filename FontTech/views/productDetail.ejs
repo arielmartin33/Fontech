@@ -6,39 +6,33 @@
         <%- include ('./partials/header.ejs') %>
             <main>
                 <div class="contenedor-producto">
-                    <% productSelected.forEach(product => { %>
+                    
                         <div class="escritorio">
                             <div class="h3">
-                                <h3><%= product.name %></h3>
+                                <h3><%= product.productName %></h3>
                             </div>
                             <div class="producto-imgs">
                                 <div class="img-principal">
-                                    <img src="/img/product/<%= product.images[0] %>" alt="imagen del prod.">
-                                </div>
-                                <div class="img-secundaria">
-                                    <img src="/img/product/<%=product.images[1] %>" alt="">
-                                    <img src="/img/product/<%= product.images[2] %>" alt="">
+                                    <img src="/img/product/<%= product.productImage%>" alt="imagen del prod.">
                                 </div>
                             </div>
                         </div>
                         <div class="escritorio">
                             <div class="descripcion-producto">
-                                <h2><%= product.name %></h2>
-                                <p><%= product.description %></p>
-                                <p><%= product.category %></p>
-                                <p><%= product.price %></p>
+                                <h2><%= product.productName %></h2>
+                                <p><%= product.productDescription %></p>
+                                <p><%= product.productCategory %></p>
+                                <p><%= product.productPrice %></p>
+                                <p><%= product.productDiscount %></p>
                             </div>
-    
                             <div class="pagos">
                                 <h5>Medios de pago</h5>
                                 <img src="../img/mercado-pago-banner.png" alt="">
                             </div>
-    
                             <div class="btn-producto">
                                 <button>COMPRAR <i class="fas fa-cart-plus"></i> </button>
                             </div>
                         </div>
-                        <% }) %>
                     </div>
             </main>
 

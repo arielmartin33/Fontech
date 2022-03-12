@@ -26,22 +26,26 @@
             <div class="col-13">
 					<div class="col-12 col-md-6">
                         <label for="category" class="form-label">Categoría:</label>
-                        <input type="text" id="name" name="category"  class="form-input">
-                       
+						<select required name="idCategory">
+							<% categories.forEach(category => { %>
+								<option value="<%= category.idCategory%>"><%=category.categoryDescription%></option>
+								<% }) %>  
+						</select>
 					</div>
 					<div class="col-12 col-md-6">
                         <label for="price" class="form-label">Precio del producto:</label>
 						<input type="text" id="price" name="price"  class="form-input">
-                    
-                       
 					</div>
                     <div class="col-12">
-                        <label for="destacado" class="form-label">Destacado:</label>
-                        <select name="destacado" id="destacado" class="form-input">
-                            <option value="Destacado">Si</option>
-                            <option value="Destacado">No</option>
-                        
+                        <label for="offer" class="form-label">En Oferta:</label>
+                        <select name="offer" id="offer" class="form-input">
+                            <option value="offer">Si</option>
+                            <option value="offer">No</option>
                         </select> 
+						<div class="col-12 col-md-6">
+							<label for="discount" class="form-label">% de Descuento:</label>
+							<input type="text" id="discount" name="discount" class="form-input">
+						</div>
                         
                     </div>
                 </div>

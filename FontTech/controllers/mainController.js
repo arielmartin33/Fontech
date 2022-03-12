@@ -1,15 +1,24 @@
-const fs = require('fs');
-const path = require('path');
+const { Product } = require('../database/models');
+const { Category } = require('../database/models');
 
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const mainController = {
+// const mainController = {
     
-    index: (req, res) => {
-        const response = products.filter(product => product.destacado == true)
-        res.render('home', {products: response});
+    // index: (req, res) => {
+    //     const response = products.filter(product => product.destacado == true)
+    //     res.render('home', {products: response});
+    // },
+
+    module.exports = {
+        index: (req, res) => {
+            Product.findAll({
+                where: {
+                    productVisited: true,
+                }
+            })
+            .then(products => res.render('home', { products }))
+            .catch(error => res.send(error))
     },
+}
     // register: (req, res) =>{
     //      return res.render('registro');
     //  },
@@ -22,5 +31,5 @@ const mainController = {
     // products: (req, res) => {
     //     return res.render('products');
     // },
-}
-module.exports = mainController;
+// }
+// module.exports = mainController;
