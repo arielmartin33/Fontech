@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Product';
+    let alias = 'User';
     let cols = {
         id: {
                 type: dataTypes.BIGINT(10),
@@ -7,51 +7,47 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false,
                 autoIncrement: true
         },
-        name: {
+        first_name: {
             type: dataTypes.STRING(45),
             allowNull: false
         },
-        description: {
+        last_name: {
             type: dataTypes.STRING(45),
             allowNull: true
         },
-        price: {
-            type: dataTypes.DECIMAL(11,2),
+        email: {
+            type: dataTypes.STRING(60),
             allowNull: false
         },
-        offer: {
-            type: dataTypes.BOOLEAN,
+        password: {
+            type: dataTypes.STRING(16),
             allowNull: true
         },
-        discount: {
-            type: dataTypes.BIGINT(2),
+        create_time: {
+            type: dataTypes.DATE(),
             allowNull: true
         },
-        visited: {
-            type: dataTypes.BOOLEAN,
-            allowNull: true
-        },
-        categories_id: {
+        roles_id: {
             type: dataTypes.BIGINT(10),
             allowNull: false
         }
     };
 
     let config = {
-        tableName: "products",
+        tableName: "user",
         timestamps: false
     }
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = function (models) {
-        Product.belongsTo(models.Category, {
-            as: 'category',
-            foreignKey: 'categories_id'
+    User.associate = function (models) {
+        User.belongsTo(models.Roles, {
+            as: 'roles',
+            foreignKey: 'roles_id'
         }),
-        Product.hasMany(models.Product_image, {
-            as: 'Product_image',
-            foreignKey: 'products_id'
+        user.hasMany(models.User_image, {
+            as: 'user_images',
+            foreignKey: 'user_id'
         })
     }
-    return Product;
+    return User;
 }

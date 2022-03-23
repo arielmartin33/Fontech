@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category';
+    let alias = 'Role';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10),
@@ -7,23 +7,22 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        description: {
-            type: dataTypes.STRING(100),
+        name: {
+            type: dataTypes.STRING(45),
             allowNull: false
         }
     };
     let config = {
-        tableName: 'categories',
+        tableName: 'roles',
         timestamps: false
     }
     const Category = sequelize.define(alias, cols, config);
 
-    Category.associate = function (models) {
-        Category.hasMany(models.Product, {
-            as: 'products',
-            foreignKey: 'categories_id'
+    Role.associate = function (models) {
+        Role.hasMany(models.User, {
+            as: 'user',
+            foreignKey: 'roles_id'
         })
-        
     }
-    return Category;
+    return Role;
 }
