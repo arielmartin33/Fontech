@@ -11,7 +11,7 @@ router.get('/', productsController.index);
 // ********* Crear un nuevo producto ********
 
 router.get('/create', productsController.create);
-router.post('/', uploadImage.single('images'), productsController.store);
+router.post('/', uploadImage.array('images', 3), productsController.store);
 
 // // ********* Seleccionar un producto *********
 router.get('/:id', productsController.detail),

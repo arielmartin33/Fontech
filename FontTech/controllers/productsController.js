@@ -23,22 +23,29 @@ module.exports = {
         .then((categories) => res.render('productCreate', { categories}))
         .catch(error => res.send(error))
     },
-    store: (req, res) => {
-        const {file} = req;
+    store: async (req, res) => {
+        const {files} = req;
         const {name, description, category, price, destacado } = req.body;
-
-        Product.create({
-            name,
-            description, 
-            category, 
-            price, 
-            destacado,
-            image: file.filename,
-        })
-        .then(product => {
+        try{
+            const productCreated = await Product.create({
+                name,
+                description, 
+                category, 
+                price, 
+                destacado,
+            })
+            for (let index = 0; index < files.length; index++) {
+                const file = files[index];
+                
+                await productImage.create({
+                    products_id: productCreated.id,
+                    url: file.filename
+                })
+            }
             res.redirect('products')
-        })
-        .catch(error => res.send(error))
+        }catch(error){
+            res.send(error)
+        }
     }
 
 }
