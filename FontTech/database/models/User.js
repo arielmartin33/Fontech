@@ -37,14 +37,14 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "user",
         timestamps: false
     }
-    const Product = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
 
     User.associate = function (models) {
-        User.belongsTo(models.Roles, {
+        User.belongsTo(models.Role, {
             as: 'roles',
             foreignKey: 'roles_id'
         }),
-        user.hasMany(models.User_image, {
+        User.hasMany(models.User_image, {
             as: 'user_images',
             foreignKey: 'user_id'
         })

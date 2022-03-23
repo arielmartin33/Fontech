@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'roles',
         timestamps: false
     }
-    const Category = sequelize.define(alias, cols, config);
+    const Role = sequelize.define(alias, cols, config);
 
     Role.associate = function (models) {
         Role.hasMany(models.User, {
