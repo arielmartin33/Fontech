@@ -12,9 +12,11 @@
                                 <h3><%= product.productName %></h3>
                             </div>
                             <div class="producto-imgs">
-                                <div class="img-principal">
-                                    <img src="/img/product/<%= product.productImage%>" alt="imagen del prod.">
-                                </div>
+                                <% product.images.forEach(element => { %>
+                                    <div class="img-principal">
+                                        <img src="/img/product/<%= element.url %>" alt="imagen del prod.">
+                                    </div>
+                                <% }) %>
                             </div>
                         </div>
                         <div class="escritorio">

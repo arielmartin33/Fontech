@@ -7,15 +7,33 @@ module.exports = {
         Product.findAll({
             order: [
                 ['price', 'DESC']
+            ],
+            include: [
+                'images'
             ]
+
         })
         .then(products => {
-            res.render('products', {products})
+            const data = products.map(product => {
+                const image = product.images.length > 0 ? product.images[0].url : 'default.jpg'
+                return {
+                    ...product.dataValues,
+                    image
+                }
+            })
+            res.render('products', {products:data})
+
         })
         .catch(error => res.send(error))
     },
     detail: (req, res) => {
-        Product.findByPk(req.params.id)
+        Product.findOne({ 
+            where: {
+                id: req.params.id
+            },
+            include: ['images']
+        })
+
         .then(product => res.render('productDetail', { product }))
         .catch(error => res.send(error))
     },
@@ -26,13 +44,14 @@ module.exports = {
     },
     store: async (req, res) => {
         const {files} = req;
-        const {name, description, price, discount, category } = req.body;
+        const {name, description, price, discount, offer, category } = req.body;
         try{
             const productCreated = await Product.create({
                 name,
                 description, 
                 price,
-                discount, 
+                discount,
+                offer, 
                 categories_id: category 
             })
             for (let index = 0; index < files.length; index++) {
