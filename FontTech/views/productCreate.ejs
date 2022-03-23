@@ -26,9 +26,9 @@
             <div class="col-13">
 					<div class="col-12 col-md-6">
                         <label for="category" class="form-label">Categoría:</label>
-						<select required name="idCategory">
+						<select required name="category">
 							<% categories.forEach(category => { %>
-								<option value="<%= category.idCategory%>"><%=category.categoryDescription%></option>
+								<option value="<%= category.id%>"><%=category.description%></option>
 								<% }) %>  
 						</select>
 					</div>
@@ -38,9 +38,9 @@
 					</div>
                     <div class="col-12">
                         <label for="offer" class="form-label">En Oferta:</label>
-                        <select name="offer" id="offer" class="form-input">
-                            <option value="offer">Si</option>
-                            <option value="offer">No</option>
+                        <select name = "offer" class="form-input">
+                            <option value="1">Si</option>
+                            <option value="0">No</option>
                         </select> 
 						<div class="col-12 col-md-6">
 							<label for="discount" class="form-label">% de Descuento:</label>

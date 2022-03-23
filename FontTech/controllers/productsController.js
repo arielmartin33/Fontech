@@ -1,11 +1,12 @@
 const { Product } = require('../database/models');
 const { Category } = require('../database/models');
+const { Product_image } = require('../database/models');
 
 module.exports = {
     index: (req, res) => {
         Product.findAll({
             order: [
-                ['productPrice', 'DESC']
+                ['price', 'DESC']
             ]
         })
         .then(products => {
@@ -25,19 +26,19 @@ module.exports = {
     },
     store: async (req, res) => {
         const {files} = req;
-        const {name, description, category, price, destacado } = req.body;
+        const {name, description, price, discount, category } = req.body;
         try{
             const productCreated = await Product.create({
                 name,
                 description, 
-                category, 
-                price, 
-                destacado,
+                price,
+                discount, 
+                categories_id: category 
             })
             for (let index = 0; index < files.length; index++) {
                 const file = files[index];
                 
-                await productImage.create({
+                await Product_image.create({
                     products_id: productCreated.id,
                     url: file.filename
                 })
