@@ -11,11 +11,11 @@
                 <div class="container">
                     <% products.forEach(product => { %>
                         <div class="card">
-                            <img src="/img/product/<%= product.productImage%> ">
-                            <h4><%= product.productName %></h4>
-                            <p><%= product.productPrice %></p>
+                            <img src="/img/product/<%= product.image %> ">
+                            <h4><%= product.name %></h4>
+                            <p><%= product.price %></p>
                             <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
-                            <a href="/products/<%= product.idProduct %>">Mas Info</a>
+                            <a href="/products/<%= product.id%>">Mas Info</a>
                         </div>
                     <% }) %>
 

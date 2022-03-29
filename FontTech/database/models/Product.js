@@ -1,41 +1,39 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
-        idProduct: {
-                    type: dataTypes.BIGINT(10),
-                    primaryKey: true,
-                    allowNull: false,
-                    autoIncrement: true
+        id: {
+                type: dataTypes.BIGINT(10),
+                primaryKey: true,
+                allowNull: false,
+                autoIncrement: true
         },
-        productName: {
-            type: dataTypes.STRING(200),
+        name: {
+            type: dataTypes.STRING(45),
             allowNull: false
         },
-        productDescription: {
-            type: dataTypes.STRING(200),
+        description: {
+            type: dataTypes.STRING(45),
             allowNull: true
         },
-        productPrice: {
-            type: dataTypes.DECIMAL(9,0),
+        price: {
+            type: dataTypes.DECIMAL(11,2),
             allowNull: false
         },
-        productOffer: {
+        offer: {
             type: dataTypes.BOOLEAN,
             allowNull: true
         },
-        productDiscount: {
+        discount: {
             type: dataTypes.BIGINT(2),
             allowNull: true
         },
-        productVisited: {
+        visited: {
             type: dataTypes.BOOLEAN,
             allowNull: true
         },
-        categoryId: {
-            type: dataTypes.BIGINT(10)
-        },
-        productImage: {
-            type: dataTypes.STRING(300)
+        categories_id: {
+            type: dataTypes.BIGINT(10),
+            allowNull: false
         }
     };
 
@@ -48,9 +46,12 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             as: 'category',
-            foreignKey: 'categoryId'
+            foreignKey: 'categories_id'
+        }),
+        Product.hasMany(models.Product_image, {
+            as: 'images',
+            foreignKey: 'products_id'
         })
     }
-
     return Product;
 }

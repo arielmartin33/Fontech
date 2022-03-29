@@ -12,7 +12,7 @@ const { Category } = require('../database/models');
         index: (req, res) => {
             Product.findAll({
                 where: {
-                    productVisited: true,
+                    visited: true,
                 }
             })
             .then(products => res.render('home', { products }))

@@ -1,20 +1,39 @@
 const { Product } = require('../database/models');
 const { Category } = require('../database/models');
+const { Product_image } = require('../database/models');
 
 module.exports = {
     index: (req, res) => {
         Product.findAll({
             order: [
-                ['productPrice', 'DESC']
+                ['price', 'DESC']
+            ],
+            include: [
+                'images'
             ]
+
         })
         .then(products => {
-            res.render('products', {products})
+            const data = products.map(product => {
+                const image = product.images.length > 0 ? product.images[0].url : 'default.jpg'
+                return {
+                    ...product.dataValues,
+                    image
+                }
+            })
+            res.render('products', {products:data})
+
         })
         .catch(error => res.send(error))
     },
     detail: (req, res) => {
-        Product.findByPk(req.params.id)
+        Product.findOne({ 
+            where: {
+                id: req.params.id
+            },
+            include: ['images']
+        })
+
         .then(product => res.render('productDetail', { product }))
         .catch(error => res.send(error))
     },
@@ -25,19 +44,20 @@ module.exports = {
     },
     store: async (req, res) => {
         const {files} = req;
-        const {name, description, category, price, destacado } = req.body;
+        const {name, description, price, discount, offer, category } = req.body;
         try{
             const productCreated = await Product.create({
                 name,
                 description, 
-                category, 
-                price, 
-                destacado,
+                price,
+                discount,
+                offer, 
+                categories_id: category 
             })
             for (let index = 0; index < files.length; index++) {
                 const file = files[index];
                 
-                await productImage.create({
+                await Product_image.create({
                     products_id: productCreated.id,
                     url: file.filename
                 })
@@ -49,47 +69,3 @@ module.exports = {
     }
 
 }
-// const controller = {
-    // Muestro todos los productos
-    
-    // detail: (req, res) => {
-    //     const id = req.params.id;
-    //     const productSelected = products.filter(product => product.id == id);
-    //     res.render('productDetail', {productSelected});
-    // },
-    // create: (req, res) => {
-    //     res.render('productCreate');
-    // },
-    // store: (req, res) =>{
-    //     let newProduct = {
-    //         id: products[products.length -1].id + 1,
-    //         ...req.body,
-    //         images:req.files.map(function (file) {
-    //             return file.filename;
-    //         })
-    //     }
-    //     Product.create(newProduct);
-    //     // res.render('products',{products});
-    //     res.redirect('products');
-
-    // },
-    // edit: (req, res) => {
-    //     let idProduct = req.params.id;
-    //     let productToEdit = Product.findByPk(idProduct)
-    //     res.render('productEdit', {productToEdit});
-    // },
-    // update: (req, res)=> {
-    //     req.body.id = req.params.id;
-    //     /* Si adjunta una imagen la guardamos, si no, mantenemos la imagen anterior */
-    //     req.body.image = req.file ? req.file.filename : req.body.oldImage;
-    //     Product.update(req.body);
-    //     res.redirect('/products/' + req.params.id);
-    // },
-    // delete: (req, res)=>{
-    //     Product.destroy(req.params.id)
-    //     res.redirect('/products');
-    // }
-
-// };
-
-// module.exports = controller
