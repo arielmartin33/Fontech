@@ -1,8 +1,9 @@
 window.addEventListener("load", function () {
-  let bottonNewsletter = document.getElementsByClassName("botonNewsletter");
-  console.log("funciona");
+  let bottonNewsletter = document.querySelector("body");
+  alert("funciona");
 
   bottonNewsletter.addEventListener("click", function () {
     alert("funciona");
+    bottonNewsletter.style.backgroundColor = "red";
   });
 });
