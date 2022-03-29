@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `fontech` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `fontech`;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: fontech
@@ -112,7 +110,7 @@ CREATE TABLE `product_images` (
   PRIMARY KEY (`id`),
   KEY `fk_product_images_products1_idx` (`products_id`),
   CONSTRAINT `fk_product_images_products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +119,7 @@ CREATE TABLE `product_images` (
 
 LOCK TABLES `product_images` WRITE;
 /*!40000 ALTER TABLE `product_images` DISABLE KEYS */;
-INSERT INTO `product_images` VALUES (1,'1648009286434_img.jpeg',2),(2,'1648009286437_img.jpeg',2),(3,'1648009818391_img.jpg',3),(4,'1648009818392_img.jpg',3),(5,'1648009818393_img.jpg',3);
+INSERT INTO `product_images` VALUES (1,'1648009286434_img.jpeg',2),(2,'1648009286437_img.jpeg',2),(3,'1648009818391_img.jpg',3),(4,'1648009818392_img.jpg',3),(5,'1648009818393_img.jpg',3),(6,'1648072069074_img.jpeg',4),(7,'1648072069078_img.jpeg',4),(8,'1648075817461_img.jpg',5);
 /*!40000 ALTER TABLE `product_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +142,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `fk_products_categories1_idx` (`categories_id`),
   CONSTRAINT `fk_products_categories1` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +151,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'HP pavilion','Notebook 14\" i7 240gb ssd',150000.00,NULL,5,NULL,1),(2,'Dell Inspirion','Notebook 15.6\" i5 10gen',250000.00,NULL,10,NULL,1),(3,'Servidor DL 380 G11','servidor hp',200000.00,NULL,10,NULL,2);
+INSERT INTO `products` VALUES (1,'HP pavilion','Notebook 14\" i7 240gb ssd',150000.00,NULL,5,NULL,1),(2,'Dell Inspirion','Notebook 15.6\" i5 10gen',250000.00,NULL,10,NULL,1),(3,'Servidor DL 380 G11','servidor hp',200000.00,NULL,10,NULL,2),(4,'pc','una pc gamer',90000.00,NULL,15,NULL,2),(5,'qweqweqweqwe','qweqweqweqweqwe',8888888.00,1,20,NULL,2);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,32 +179,6 @@ LOCK TABLES `roles` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `user_images`
---
-
-DROP TABLE IF EXISTS `user_images`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user_images` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `url` varchar(60) DEFAULT NULL,
-  `users_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_user_images_users1_idx` (`users_id`),
-  CONSTRAINT `fk_user_images_users1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_images`
---
-
-LOCK TABLES `user_images` WRITE;
-/*!40000 ALTER TABLE `user_images` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_images` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -220,6 +192,7 @@ CREATE TABLE `users` (
   `email` varchar(60) DEFAULT NULL,
   `password` varchar(16) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT NULL,
+  `imageUrl` varchar(45) DEFAULT NULL,
   `roles_id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_users_roles1_idx` (`roles_id`),
@@ -245,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-23  2:14:20
+-- Dump completed on 2022-03-29 19:58:36

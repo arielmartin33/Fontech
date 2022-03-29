@@ -35,5 +35,5 @@ app.use("/user", userRoutes);
 
 const port = process.env.PORT || 3500;
 app.listen(port, () => {
-  console.log("servidor corriendo en puerto" + port);
+  console.log("servidor corriendo en puerto " + port);
 });
