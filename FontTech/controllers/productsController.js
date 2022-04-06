@@ -11,7 +11,6 @@ module.exports = {
             include: [
                 'images'
             ]
-
         })
         .then(products => {
             const data = products.map(product => {

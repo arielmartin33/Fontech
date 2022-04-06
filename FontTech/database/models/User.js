@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
@@ -27,6 +28,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE(),
             allowNull: true
         },
+        imageUrl: {
+            type: dataTypes.STRING(45),
+            allowNull: true
+        },
         roles_id: {
             type: dataTypes.BIGINT(10),
             allowNull: false
@@ -34,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: "user",
+        tableName: "users",
         timestamps: false
     }
     const User = sequelize.define(alias, cols, config);
@@ -43,10 +48,6 @@ module.exports = (sequelize, dataTypes) => {
         User.belongsTo(models.Role, {
             as: 'roles',
             foreignKey: 'roles_id'
-        }),
-        User.hasMany(models.User_image, {
-            as: 'user_images',
-            foreignKey: 'user_id'
         })
     }
     return User;

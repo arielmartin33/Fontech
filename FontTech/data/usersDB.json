@@ -34,5 +34,14 @@
   "password": "$2a$10$ZLoRQ/WPiR.O/Y7ctgSbe.JQWCcxeyIT3fb8/wQEQDoC88zHcQ8LS",
   "repassword": "123",
   "image": "1645642656555_img.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Tatiana",
+  "apellido": "Acuña",
+  "email": "tati@gmail.com",
+  "password": "$2a$10$cj8i7S5tsSjLQVOfifyLj.bT8cImzfae35aiZyhya6msJXnZGO7Zm",
+  "repassword": "quelevamoase",
+  "image": "1648596492325_img.png"
  }
 ]
