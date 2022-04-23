@@ -24,21 +24,44 @@
         </div>
 
         <div class="formularioL">
-            <form action="/user/login" method="post" class="inputs-container">
+
+            <form action="/user/login" method="post" class="inputs-container" id="inputs-container">
                 <p>O</p>
-                <input type="text" name="email" placeholder="E-mail">
+
+                <div class="formularioGrupo" id="grupo__email">
+                    <div class="formularioGrupoInput">
+
+                <input type="text"  class="formularioInput" name="email" id="email"  placeholder="E-mail">
                 <% if (locals.errors && errors.email) { %>
                     <div class="error">
                         <%= errors.email.msg %> 
                     </div>
                 <% } %>
-                <input class="password" type="password" name="password" placeholder="Contaseña">
+
+                <i class="formularioValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">Formato invalido</p>
+
+          </div>
+
+
+          <div class="formularioGrupo" id="grupo__password">
+            <div class="formularioGrupoInput">
+                <input type="password" class="formularioInput" name="password" id="password" placeholder="Contaseña">
+                <i class="formularioValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">La contraseña debe tener entre 8 y 15 caracteres</p>
+
+          </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                        <input type="checkbox" class="form-check-input" name="remember_user" style= "width:15px">Recordar mi usuario
                     </label>
                 </div>
-                <button class="btn-login">Login</button>
+                
+
+
+                <button class="btn-login formularioGrupoBtn btn-crea formularioBtn">Login</button>
             </form>
         </div>
         <div class="columna">
@@ -53,9 +76,9 @@
             </a>
             <!-- <button class="btn-crea-tu-cuenta"><a href='registro'>Crea tu cuenta</a></button> -->
         </div>
-        <a href="#" class="btn-close-popup">X</a>
     </div>
     <%- include ('./partials/footer.ejs') %>
+    <script src="../js/userLoginForm.js"></script>
 </body>
 
 </html>

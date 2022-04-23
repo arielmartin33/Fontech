@@ -16,7 +16,9 @@
 }
 body {
   background-image: url("../img/fondo.png");
-
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
   background-color: white;
   font-family: "Viga", sans-serif;
   padding: 5px;
@@ -71,6 +73,8 @@ header .contenedor {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .barraUsuario {
   display: flex;
@@ -93,6 +97,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 #productos .contenedor img {
@@ -102,6 +107,9 @@ section {
   margin-bottom: 20px;
 }
 
+.fa-shopping-cart {
+  margin-top: 15px
+}
 footer {
   background-color: lavender;
   border-radius: 3px;
@@ -155,7 +163,7 @@ footer .direccion,
     width: 100%;
   }
   .contenedor a {
-    font-size: 20px;
+    font-size: 19px;
   }
   .fa-bars {
     display: none;
@@ -168,6 +176,8 @@ footer .direccion,
   .container .card a {
     font-size: 20px;
   }
+
+ 
   footer .contenedor {
     display: inline-flex;
     justify-content: space-evenly;
@@ -176,6 +186,10 @@ footer .direccion,
 @media (min-width: 320px) {
   footer .contenedor {
     flex-wrap: wrap;
+  }
+  header .contenedor{
+    height: 70px;
+    
   }
 }
 @media (min-width: 768px) {
@@ -187,11 +201,7 @@ footer .direccion,
   .newsletter {
     margin-top: 70px;
   }
-  body {
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-attachment: fixed;
-  }
+
   .barraUsuario {
     display: flex;
     align-self: flex-end;
@@ -202,4 +212,12 @@ footer .direccion,
     padding: 5px;
     text-decoration: auto;
   }
-}
+
+  .fa-shopping-cart{
+    margin-right: 40px;
+    }
+    .fa-bars{
+      margin-left:350px
+    }
+  }
+

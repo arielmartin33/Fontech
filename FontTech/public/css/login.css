@@ -1,11 +1,18 @@
 .container-all-centrado{
-    margin-top: 50px;
+   
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.inputs-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-login-elemento{
@@ -30,5 +37,29 @@
       width: 350px;
        
     }
+    .container-all-centrado{
+   
+        width: 100vw;
+        height: 95vh;
 
 }
+ }
+
+@media screen and (max-width: 426px){
+
+  .formularioInput{
+      width: 100%;
+  }
+    .error{
+        width: 100px;
+    } 
+    .formularioInputError{
+        width: 250px;
+        text-align: center;
+        align-items: center;
+    }
+    .container-all-centrado{
+   
+        
+        height: 125vh;
+ } }

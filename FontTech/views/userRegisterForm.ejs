@@ -2,81 +2,153 @@
 <html lang="en">
 <%- include ('./partials/head.ejs') %>
 
-    <body>
-        <%- include ('./partials/header.ejs') %>
-            <div class="formulario-registro">
-                <h3> Registrate mediante</h3>
-                
-                <div class="social-login-elemento">
-                    <div>
-                        <a href="#"><img src="../img/google.svg" alt="">
-                        <span>Google</span></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="../img/facebook.svg" alt="">
-                        <span>Facebook</span></a>
-                    </div>
-                </div>
-                <p> O </p>
-                <h3>Registro Manual</h3>
-                
-                <div id="form-datos">
+  <body>
+    <%- include ('./partials/header.ejs') %>
+      <div class="formulario-registro">
+        <h3>Registrate mediante</h3>
 
-                    <form action="/user/register" method="post" class="formularioR" enctype="multipart/form-data" autocomplete="off">
-                        <input
-                            type="text" 
-                            name="nombre" 
-                            placeholder="Nombre"
-                            class="errors <%= locals.errors && errors.nombre ? 'is-invalid' : '' %>"
-                            value= "<%= locals.oldData ? oldData.nombre : '' %>">
-                        <% if (locals.errors && errors.nombre) { %>
-                        <div class="error"><%= errors.nombre.msg %> </div>
-                        <% } %>
-                        <input 
-                            type="text" 
-                            name="apellido" 
-                            placeholder="Apellido:"
-                            class="<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
-                            value= "<%= locals.oldData ? oldData.apellido : '' %>">
-                        <% if (locals.errors && errors.apellido) { %>
-                            <div class="error"><%= errors.apellido.msg %> </div>
-                            <% } %>
-                        <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="E-mail:"
-                        class="<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
-                        value= "<%= locals.oldData ? oldData.email : '' %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="error"><%= errors.email.msg %> </div>
-                            <% } %>
-                        <input 
-                        type="password" 
-                        name="password" 
-                        placeholder="Contaseña:">
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="error"><%= errors.password.msg %> </div>
-                            <% } %>
-                        <input 
-                        type="password" 
-                        name="repassword" 
-                        placeholder="Repertir Contaseña:">
-                        <% if (locals.errors && errors.repassword) { %>
-                            <div class="error"><%= errors.repassword.msg %> </div>
-                            <% } %>
-                        <input type="file" name="image">
-                        <% if (locals.errors && errors.image) { %>
-                            <div class="error"><%= errors.image.msg %> </div>
-                            <% } %>
-                        
-                        <button type="submit" class="btn-crea">Crea tu Cuenta</button>
-                    </form>
+        <div class="social-login-elemento">
+          <div>
+            <a href="#"><img src="../img/google.svg" alt="" /> <span>Google</span></a>
+          </div>
+          <div>
+            <a href="#"><img src="../img/facebook.svg" alt="" /> <span>Facebook</span></a>
+          </div>
+        </div>
+        <p>O</p>
+        <h3>Registro Manual</h3>
 
-                    <!-- <button type="submit" class="btn-crea">Crea tu Cuenta</button> -->
-                </div>
+        <div id="form-datos">
+          <form action="/user/register" method="post" class="formularioR" id="formulario" enctype="multipart/form-data"
+            autocomplete="off">
+            <!-- GRUPO: NOMBRE -->
+            <div class="formularioGrupo" id="grupo__nombre">
+
+              <div class="formularioGrupoInput">
+                <input type="text" class="formularioInput" name="nombre" id="nombre" placeholder="Nombre:"
+                  class="errors <%= locals.errors && errors.nombre ? 'is-invalid' : '' %>"
+                  value="<%= locals.oldData ? oldData.nombre : '' %>">
+                <% if (locals.errors && errors.nombre) { %>
+                  <div class="error">
+                    <%= errors.nombre.msg %>
+                  </div>
+                  <% } %>
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+              </div>
+              <p class="formularioInputError">El nombre debe tener mínimo de 2 caracteres</p>
 
             </div>
-            <%- include ('./partials/footer.ejs') %>
-    </body>
+
+            <!-- GRUPO_APELLIDO -->
+            <div class="formularioGrupo" id="grupo__apellido">
+
+              <div class="formularioGrupoInput">
+
+                <input type="text" class="formularioInput" name="apellido" id="apellido" placeholder="Apellido:"
+                  class="<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.apellido : '' %>" />
+                <% if (locals.errors && errors.apellido) { %>
+                  <div class="error">
+                    <%= errors.apellido.msg %>
+                  </div>
+                  <% } %>
+
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+              </div>
+              <p class="formularioInputError">El apellido debe tener mínimo de 2 caracteres</p>
+
+            </div>
+
+            <div class="formularioGrupo" id="grupo__email">
+              <div class="formularioGrupoInput">
+
+                <input type="email" class="formularioInput" name="email" id="email" placeholder="E-mail:"
+                  class="<%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.email : '' %>" />
+                <% if (locals.errors && errors.email) { %>
+                  <div class="error">
+                    <%= errors.email.msg %>
+                  </div>
+                  <% } %>
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+              </div>
+              <p class="formularioInputError">Formato de mail invalido</p>
+
+            </div>
+
+
+
+
+
+            <div class="formularioGrupo" id="grupo__password">
+              <div class="formularioGrupoInput">
+                <input type="password" class="formularioInput" name="password" id="password" placeholder="Contaseña:" />
+
+                <% if (locals.errors && errors.password) { %>
+                  <div class="error">
+                    <%= errors.password.msg %>
+                  </div>
+                  <% } %>
+
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+              </div>
+              <p class="formularioInputError">La contraseña debe tener entre 8 y 15 caracteres</p>
+
+            </div>
+
+
+
+            <div class="formularioGrupo" id="grupo__password2">
+              <div class="formularioGrupoInput">
+
+                <input type="password" class="formularioInput" name="password2" id="password2"
+                  placeholder="Repertir Contaseña:" />
+                <% if (locals.errors && errors.repassword) { %>
+                  <div class="error">
+                    <%= errors.repassword.msg %>
+                  </div>
+                  <% } %>
+
+
+                    <i class="formularioValidacionEstado fas fa-times-circle"></i>
+              </div>
+              <p class="formularioInputError">Las constraseñas deben coincidir</p>
+            </div>
+
+
+            <div class="formularioGrupo" id="grupo__image">
+              <div class="formularioGrupoInput">
+            <input type="file" name="image" id="image" class="image" />
+
+            <% if (locals.errors && errors.image) { %>
+              <div class="error">
+                <%= errors.image.msg %>
+              </div>
+              <% } %>
+
+            </div>
+           
+            <p class="formularioInputError">(JPG, JPEG, PNG, GIF). </p>
+            </div>
+
+       
+
+        <div class="formularioMensaje" id="formularioMensaje">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Por favor rellena el formulario correctamente.</p>
+        </div>
+
+        <div class="formularioGrupo formularioGrupoBtn ">
+          <button type="submit" class="btn-crea formularioBtn">Crea tu Cuenta</button>
+          <p class="formularioMensajeExito" id="formularioMensajeExito">Cuenta creada exitosamente!</p>
+
+          </form>
+
+          <!-- <button type="submit" class="btn-crea">Crea tu Cuenta</button> -->
+        </div>
+      </div>
+      <%- include ('./partials/footer.ejs') %>
+
+        <script src="../js/userRegisterForm.js"> </script>
+  </body>
 
 </html>
