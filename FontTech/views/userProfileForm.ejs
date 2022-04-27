@@ -9,15 +9,15 @@
 
         <nav class="menu">
             <a href="/">Inicio</a>
-            <a href="/user/profile">Perfil</a>
-            <a href="/user/logout">Cerrar Sesion</a>
+           
+           
             <a href="/products">Productos</a>
             <a href="">Sucursales</a>
             <a href="">Contacto</a>
             <a href="">Empresa</a>
 
         </nav>
-        
+        <a href="/user/logout">Cerrar Sesion</a>
         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
          
@@ -31,7 +31,7 @@
         <ul>
             <% if (locals.isLogged) { %>
             <li>
-                <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius:100%;">
+                <img src="/img/users/<%= locals.userLogged.imageUrl %>" width="40" style="border-radius:100%;">
                
             </li>
             
@@ -46,7 +46,7 @@
     <div class="row">
         <div class="col-md-3">
             <h2>Hola <%= user.nombre %> </h2>
-            <img src="/img/users/<%= user.image %> ">
+            <img src="/img/users/<%= user.imageUrl %> ">
             <br>
             <br>
             <div class="alert alert-success"><%= user.email %> </div>

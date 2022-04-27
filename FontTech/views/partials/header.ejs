@@ -28,7 +28,7 @@
                 <% if (locals.isLogged) { %>
                     <div class="barraUsuario">
                         <a href="/user/profile" >
-                            <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius:100%; padding: 2px;">
+                            <img src="/img/users/<%= locals.userLogged.imageUrl %>" width="40" height="40" style="margin-top: 10px; border-radius:100%; padding: 2px;">
                         </a>                       
                         <a href="/user/profile" class="barraA" ><%= locals.userLogged.nombre %></a>
                         <a href="/user/logout" class="barraA" >Cerrar Sesion</a>

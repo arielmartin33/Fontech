@@ -3,10 +3,10 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-                type: dataTypes.BIGINT(10),
-                primaryKey: true,
-                allowNull: false,
-                autoIncrement: true
+            type: dataTypes.BIGINT(10),
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true
         },
         first_name: {
             type: dataTypes.STRING(45),

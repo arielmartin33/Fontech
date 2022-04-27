@@ -10,15 +10,31 @@
 				<h2 class="products-title">Formulario de creación de productos</h2>
        
             <div class="col-12">
-			<form action="/products" method="post" enctype="multipart/form-data">
+			<form  action="/products" method="post" enctype="multipart/form-data" class="inputs-container" id="inputs-container">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name"  class="form-input">
+
+						<div class="formularioGrupo" id="grupo__name">
+							<div class="formularioGrupoInput">
+						<input type="text" id="name" name="name"  class="form-input formularioInput">
+						<i class="formularioValidacionEstado fas fa-times-circle"></i>
 					</div>
+					<p class="formularioInputError">El nombre debe tener al menos 5 caracteres</p>
+		
+				  </div>
+					</div>
+
 					<div class="col-12 col-md-6">
                         <label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
+						<div class="formularioGrupo" id="grupo__descripcion">
+							<div class="formularioGrupoInput">
+						<textarea name="description" id="description" class="form-input formularioInput"></textarea>
+						<i class="formularioValidacionEstado fas fa-times-circle"></i>
+					</div>
+					<p class="formularioInputError">Formato invalido</p>
+		
+				  </div>
 					</div>
                 </div>
             </div>
@@ -67,6 +83,7 @@
  
 
 <%- include ('./partials/footer.ejs') %>
+<script src="../js/productCreate.js"> </script>
 
 </body>
 

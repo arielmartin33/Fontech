@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-const { User } = require('../database/models')
+const { User, Role } = require('../database/models')
 // const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
 
@@ -36,15 +36,16 @@ const controller = {
                 });
             }
               
+            const adminRole = await Role.findOne({where:{name:"admin"}});
             console.log(req.file);
             let userToCreate = {
                 first_name: req.body.nombre,
                 last_name: req.body.apellido,
                 email: req.body.email,
                 password: req.body.password,
-                // password: bcryptjs.hashSync(req.body.password, 10),
+                password: bcryptjs.hashSync(req.body.password, 10),
                 imageUrl: req.file.filename,
-                roles_id: 1
+                roles_id: adminRole.id 
             }
             await User.create(userToCreate);
             return res.render('userLoginForm');
@@ -66,11 +67,10 @@ const controller = {
         res.render('userLoginForm');
     },
 
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
 
-
-        let userToLogin = User.findByField('email', req.body.email);
-
+        let userToLogin = await User.findOne({ where: {'email': req.body.email }});
+        console.log(userToLogin);
         if (userToLogin) {
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (passwordOk) {
@@ -91,6 +91,9 @@ const controller = {
                     }
                 }
             });
+
+        
+
 
         }
         return res.render('userLoginForm', {

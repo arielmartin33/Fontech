@@ -91,7 +91,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
- formulario.addEventListener('submit', (e)=>{
+/*  formulario.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     if(campos.nombre && campos.apellido && campos.password && campos.email){
@@ -111,7 +111,7 @@ inputs.forEach((input) => {
 		document.getElementById('formularioMensaje').classList.add('formularioMensaje-activo');
 	}
 
-}) 
+})  */
 
 
 
