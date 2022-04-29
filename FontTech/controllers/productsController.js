@@ -65,6 +65,44 @@ module.exports = {
         }catch(error){
             res.send(error)
         }
-    }
+    },
+    edit:async (req, res) => {
+        Product.findOne({ 
+            where: {
+                id: req.params.id
+            },
+            include: ['images']
+        })
+        .then(product => res.render('productEdit', { product }))
+        .catch(error => res.send(error))
+
+
+    },
+    update: async (req, res) => {
+        const productId = req.params.id
+
+        try{
+            await Product.update (
+                const updated = {
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    offer: req.body.offer,
+                    discount: req.body.discount
+                },
+                {
+                where:{
+                    id: productId }
+                
+                }
+            )}
+
+            res.redirect('products')
+        }catch(error){
+            res.send(error)
+        }
+    },
+    
+    
 
 }

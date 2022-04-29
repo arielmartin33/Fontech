@@ -14,14 +14,15 @@ router.get('/create', productsController.create);
 router.post('/', uploadImage.array('images', 3), productsController.store);
 
 // // ********* Seleccionar un producto *********
+router.get('/:id/edit', productsController.edit);
+
 router.get('/:id', productsController.detail),
 
 
 
 // // ******** Editar un producto ********
-// router.get('/:id/edit', productsController.edit);
-// router.put('/:id', productsController.update);
-
+/* router.put('/:id', productsController.update);
+ */
 // // ********* Borrar un producto *******
 
 // router.delete('/:id', productsController.delete);

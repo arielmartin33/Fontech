@@ -15,17 +15,22 @@
                                 <% product.images.forEach(element => { %>
                                     <div class="img-principal">
                                         <img src="/img/product/<%= element.url %>" alt="imagen del prod.">
+                                          
                                     </div>
                                 <% }) %>
+                                <div class="btnEditar">
+                                    <button> <a href="/products/<%=product.id %>/edit">  Editar</a></button>
+                                    <button>Eliminar</button>
+                                </div> 
                             </div>
                         </div>
                         <div class="escritorio">
                             <div class="descripcion-producto">
-                                <h2><%= product.productName %></h2>
-                                <p><%= product.productDescription %></p>
-                                <p><%= product.productCategory %></p>
-                                <p><%= product.productPrice %></p>
-                                <p><%= product.productDiscount %></p>
+                                <h2><%= product.name %></h2>
+                                <p><%= product.description %></p>
+                                <p><%= product.category_id %></p>
+                                <p><%= product.price %></p>
+                                <p><%= product.discount %></p>
                             </div>
                             <div class="pagos">
                                 <h5>Medios de pago</h5>
