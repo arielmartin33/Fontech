@@ -1,0 +1,85 @@
+
+.contenedorFooter{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   background: #ebeff3;
+  /*  height: 100%; */
+/*     background-color: rgba(11, 64, 107);
+ */    /* padding: 20px; */
+}
+
+.direccion, .newsletter{
+    background-color: rgba(11, 64, 107, 0.89);
+    color: rgb(152, 219, 247);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 60%;
+    height: 90%;
+    line-height: 20px;
+
+
+    
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botones{ 
+   background-color: rgb(152, 219, 247);
+    display: inline-block;
+    color: rgba(11, 64, 107);
+    text-decoration: none;
+    padding: 10px 40px;
+    border: 3px solid #ebeff3;
+    border-radius: 15px;
+
+}
+.botones a{
+    text-decoration: none;
+    color:rgba(11, 64, 107) ;
+}
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter input{
+    border-radius: 5px; 
+    
+    height:35px;
+    width: 250px;
+    border-color: #ebeff3;
+
+}
+.newsletter input:focus{
+    border: 3px solid rgb(152, 219, 247);
+    outline: none;
+    box-shadow: 3px 0px 10px #ebeff3;
+
+}
+.botones:hover{
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0%{
+        box-shadow:
+        0 0 25px rgb(95, 177, 209),
+        0 0 25px rgb(109, 110, 168);
+       
+    }
+}
+
+@media (min-width: 1024px) {
+    .direccion, .newsletter{
+        width: 40%;
+        width: 40%;
+    height: 350px;
+    line-height: 20px;
+    }
+}

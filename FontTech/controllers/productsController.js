@@ -78,7 +78,7 @@ module.exports = {
 
 
     },
-    update: async (req, res) => {
+    /* update: async (req, res) => {
         const productId = req.params.id
 
         try{
@@ -102,7 +102,7 @@ module.exports = {
             res.send(error)
         }
     },
-    
+     */
     
 
 }

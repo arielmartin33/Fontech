@@ -1,25 +1,25 @@
 .formulario-registro{
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 30px;
 }
-
-/* form{
+.formularioCompleto{
+    width: 60%;
+    background: rgb(152, 219, 247);
+   margin-left: 20%;
+}
+/*  form{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-} */
-.formularioR input{
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-   
-}
+     
+}*/
+
 
 .social-login-elemento img{
     margin-left: 20px;
@@ -29,17 +29,59 @@
 .btn-crea{
     /* margin-left: 30%; */
     font-size: 15px;
-    font-family: "viga", sans-serif;
-    width: 150px;
+/*     font-family: "viga", sans-serif;
+ */    width: 150px;
     margin-top: 5px;
 }
-.error{
+
+
+/* .error{
     color: white;
     background-color: rgba(0, 0, 0, 0.63);
     font-size: 15px;
     border: dotted 3px rgba(255, 0, 0, 0.671);
     
+} */ 
+
+@media (max-width: 425px) {
+    .formularioCompleto{
+        width: 90%;
+       margin-left: 5%;
 }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Validacion JS */
@@ -72,7 +114,7 @@
         transition: .3s ease all;
     }
     .formularioInput:focus{
-        border: 3px solid #0075FF;
+        border: 3px solid rgba(11, 64, 107, 0.5);
         outline: none;
         box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
     }
@@ -150,18 +192,19 @@ justify-content: center;
 .formularioBtn {
 	height: 45px;
 	line-height: 45px;
-	width: 100%;
-	background: #000;
-	color: #fff;
+	width: 50%;
+	background:rgba(11, 64, 107, 0.89);
+
+	color: #ebeff3;
 	
 	border: none;
-	border-radius: 3px;
+	border-radius: 5px;
 	cursor: pointer;
 	transition: .1s ease all;
 }
 
 .formularioBtn:hover {
-	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+	box-shadow: 3px 0px 30px rgba(0, 0, 0);
 }
 
 .formularioMensajeExito {

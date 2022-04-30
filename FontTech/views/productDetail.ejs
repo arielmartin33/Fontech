@@ -5,6 +5,8 @@
     <body>
         <%- include ('./partials/header.ejs') %>
             <main>
+
+                <h3 class="homeTitle">Detalle del producto</h3>
                 <div class="contenedor-producto">
                     
                         <div class="escritorio">
@@ -19,8 +21,8 @@
                                     </div>
                                 <% }) %>
                                 <div class="btnEditar">
-                                    <button> <a href="/products/<%=product.id %>/edit">  Editar</a></button>
-                                    <button>Eliminar</button>
+                                    <button class="botones"> <a href="/products/<%=product.id %>/edit">  Editar</a></button>
+                                    <button class="botones">Eliminar</button>
                                 </div> 
                             </div>
                         </div>
@@ -37,12 +39,12 @@
                                 <img src="../img/mercado-pago-banner.png" alt="">
                             </div>
                             <div class="btn-producto">
-                                <button>COMPRAR <i class="fas fa-cart-plus"></i> </button>
+                                <button class="botones">COMPRAR <i class="fas fa-cart-plus"></i> </button>
                             </div>
                         </div>
                     </div>
             </main>
-
+<hr>
             <%- include ('./partials/footer.ejs') %>
 
     </body>

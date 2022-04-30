@@ -3,51 +3,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
   margin-top: 60px;
 }
-#productos{
-
-}
-main {
-  margin-top: 65px;
-}
-.h3 {
-  width: 100%;
-  background-color: black;
-  opacity: 0.7;
-  color: white;
+.escritorio{
+  width: 50%;
+  padding: 30px;
 }
 .pagos h5 {
   width: 100%;
-  background-color: black;
-  opacity: 0.7;
-  color: white;
+  background-color: rgb(11, 64, 107, 0.89);
+  color: #ebeff3;
 }
-.producto-imgs {
+/* .producto-imgs {
   display: flex;
   flex-direction: column;
-  padding: 30px;
-}
+
+} */
 
 .img-principal img {
   width: 100%;
-  border: 3px solid rgb(78, 77, 77);
+  border: 3px solid rgb(11, 64, 107, 0.30);
   padding: 30px;
 }
-.img-secundaria img {
-  width: 50%;
-  border: 2px solid rgb(78, 77, 77);
-  cursor: pointer;
-  margin: 3px;
-}
 
-.img-secundaria {
-  display: flex;
-  justify-content: space-around;
-}
 .btnEditar{
   display: flex;
+  justify-content: space-evenly;
 }
 .descripcion-producto {
   font-size: 20px;
@@ -56,15 +38,15 @@ main {
 
 .descripcion-producto {
   width: 100%;
-  margin-top: 20px;
   margin-bottom: 15px;
-  background: #f5f5f5;
+  background: #ebeff3;
 }
 .descripcion-producto h2 {
   margin-bottom: 25px;
+  text-align: center;
 }
 .descripcion-producto p {
-  font-family: sans-serif;
+  
   text-align: center;
 }
 .pagos {
@@ -74,33 +56,29 @@ main {
 .pagos img {
   width: 100%;
 }
-.contenedor-producto button {
-  padding: 10px;
-  border-radius: 20px;
-  font-family: "viga";
-  font-size: 15px;
-  cursor: pointer;
-  width: 100%;
-  background-color: cadetblue;
-  margin: 30px;
-}
-.contenedor-producto button:hover {
-  color: rgb(82, 126, 126);
-}
-.btn-producto {
-  width: 100%;
+
+.btn-producto{
+  text-align: center;
+  margin-top: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .container{
+
+
+@media (max-width: 425px) {
+    .contenedor-producto{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
     }
-   
-  .producto-imgs {
-    padding: 50px;
-  }
-  .contenedor-producto {
+   .escritorio{
+     width: 100%;
+     padding: 20px;
+   }
+
+/*   .img-principal img{
+    
+  } */
+  /* .contenedor-producto {
     margin-top: 88px;
     font-size: 30px;
   }
@@ -115,44 +93,13 @@ main {
     margin-bottom: 15px;
     background: rgb(183, 185, 181);
   }
-  .btn-producto {
-    text-align: center;
-    margin-top: 30px;
-  }
+  
   .pagos {
     margin-top: 30px;
   }
   .pagos img {
     margin-top: 30px;
-  }
-}
+  } */
+} 
 
-@media screen and (min-width: 1024px) {
-    
-  .container{
-      display: flex;
-      flex-wrap: wrap;
-  }
-  .contenedor-producto {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-  }
-  .h3 {
-    margin-left: 20px;
-  }
-
-  .escritorio {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-  .descripcion-producto {
-    margin-top: 50px;
-    width: 100%;
-    font-size: 22px;
-  }
-  .pagos {
-    margin-bottom: 30px;
-  }
-}
+ 

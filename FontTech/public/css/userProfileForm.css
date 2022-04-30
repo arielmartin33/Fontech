@@ -10,11 +10,28 @@
     height: 50%;
   
 }
-/* .menu {
-    height: 50px;
-} */
+
 .col-md-3{
     align-items: center;
     display: flex;
     flex-direction: column
 }
+.barraUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    line-height: 20px;
+}
+
+.barraUsuario a{
+    font-weight: bold;
+    /* background: #ebeff3; */
+    /* display: block; */
+    color: rgba(11, 64, 107);
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+

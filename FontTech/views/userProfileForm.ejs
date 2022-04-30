@@ -1,9 +1,15 @@
 <%- include ('./partials/head.ejs') %>
  <%- include ('./partials/header.ejs') %> 
-
+<!-- 
 <header>
     <div class="contenedor">
-        <img src="../img/Logo.png" alt="">
+        <div class="logoF">
+       
+            <a href="/">
+                <img src="../img/Logo.png" alt="" >
+            </a>
+            <p>Fonttech</p>
+        </div> 
         <input type="checkbox" id="menu-bar">
         <label class="fas fa-bars" for="menu-bar"></label>
 
@@ -23,15 +29,15 @@
          
    
 </header>
+ -->
 
-
-<div class="containerUser" style="margin-top: 50px;">
+<div class="containerUser" style="margin-top: 20px;">
 
     <nav class="user">
         <ul>
             <% if (locals.isLogged) { %>
             <li>
-                <img src="/img/users/<%= locals.userLogged.imageUrl %>" width="40" style="border-radius:100%;">
+                <img src="/img/users/<%= locals.userLogged.imageUrl%>" width="60" height="60" style="border-radius:100%;">
                
             </li>
             
@@ -46,12 +52,11 @@
     <div class="row">
         <div class="col-md-3">
             <h2>Hola <%= user.nombre %> </h2>
-            <img src="/img/users/<%= user.imageUrl %> ">
-            <br>
-            <br>
+            <img src="/img/users/<%= user.imageUrl%> ">
+        
             <div class="alert alert-success"><%= user.email %> </div>
         </div>
     </div>
 </div>
-
+<hr>
 <%- include ('./partials/footer.ejs') %>

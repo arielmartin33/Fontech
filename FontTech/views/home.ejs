@@ -9,38 +9,60 @@
             <figure>
                 <img src="../img/banner.jpg">
                 <img src="../img/DGHelp_Banner_HP-01-1.jpg">
-                <img src="../img/banner.jpg">
+                <img src="../img/banner.jpg"> 
                 <img src="../img/DGHelp_Banner_Lenovo-01-3.jpg">
                 <img src="../img/banner.jpg">
             </figure>
+            <hr>
         </div>
-    </main>
+    </main> 
+
+
+
     <h3 class="homeTitle">SEGÚN TU ÚLTIMA VISITA</h3>
+    <hr>
     <section class="productosOferta">
         <div class="container">
-                <div class="card">
+                <div class="card"> 
                     <img src="<%= products.productImage %> ">
                     <h4><%= products.productName %></h4>
                     <p><%= products.productPrice %></p>
-                    <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
-                    <a href="/products/<%= products.idProduct %>">Mas Info</a>
+<!--                      <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> 
+ -->                    <a href="/products/<%= products.idProduct %>"><button class="botones">Mas Info...</button> </a>
                 </div>
         </div>
     </section>
     <h3 class="homeTitle">PRODUCTOS EN OFERTA</h3>
+    <hr>
     <section class="productosOferta">
         <div class="container">
-                <div class="card">
+                <div class="card"> 
                     <img src="<%= products.productImage %>">
                     <h4><%= products.productDescription %></h4>
                     <p><%= products.productPrice %></p>
-                    <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
-                    <a href="/products/<%= products.idProduct %>">Mas Info</a>
+<!--                  <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> 
+ -->                    <a href="/products/<%= products.idProduct %>"><button class="botones">Mas Info...</button></a>
                 </div>
         </div>
+    </section> 
+
+    <section id="productos">
+        <hr>
+        <div class="contenedorP">
+            <img src="../img/logo/acer.png" alt="">
+            <img src="../img/logo/asus.png" alt="">
+            <img src="../img/logo/dell.png" alt="">
+            <img src="../img/logo/hp.png" alt="">
+            <img src="../img/logo/lenovo.png" alt="">
+            <img src="../img/logo/Msi-Logo.jpg" alt="">
+        </div>
+        <hr>
     </section>
+
+    
+
     <%- include ('./partials/footer.ejs') %>
     <script src="../public/js/home.js"></script>
-</body>
+ </body>
 
 </html>

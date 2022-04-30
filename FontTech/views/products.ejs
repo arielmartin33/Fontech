@@ -8,6 +8,7 @@
                 
 
                 <h1 class="homeTitle">¡Encontrá entre nuestos productos lo que necesitas!</h1>
+               
                 <div class="container">
                     <% products.forEach(product => { %>
                         <div class="card">
@@ -15,22 +16,12 @@
                             <h4><%= product.name %></h4>
                             <p><%= product.price %></p>
                             <!-- <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
-                            <a href="/products/<%= product.id%>">Mas Info</a>
+                            <a href="/products/<%= product.id%>"> <button class="botones"> Mas Info</button></a>
                         </div>
                     <% }) %>
-
-                    <section id="productos">
-                        <div class="contenedor">
-                            <img src="../img/logo/acer.png" alt="">
-                            <img src="../img/logo/asus.png" alt="">
-                            <img src="../img/logo/dell.png" alt="">
-                            <img src="../img/logo/hp.png" alt="">
-                            <img src="../img/logo/lenovo.png" alt="">
-                            <img src="../img/logo/Msi-Logo.jpg" alt="">
-                        </div>
-                    </section>
-
-
+                    </div>
+               
+<hr>
                     <%- include ('./partials/footer.ejs') %>
             </main>
     </body>

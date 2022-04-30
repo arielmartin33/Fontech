@@ -1,19 +1,118 @@
 @import url(menu.css);
+@import url(footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url(slider-tarjetas.css);
-@import url(popup.css);
-@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Viga&display=swap");
-@import url(registro.css);
-@import url(carrito.css);
 @import url(producto.css);
+@import url(registro.css); 
 @import url(login.css);
-@import url(userProfileForm.css);
 @import url(productCreate.css);
+@import url(userProfileForm.css)
+;
+/*
+
+
+@import url(carrito.css);
+
+
+*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ebeff3
+
+}
+hr{
+  height: 2px;
+  border-color: rgba(11, 64, 107);
+  margin-top: 5px;
+}
+.contenedor{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+.logoF{
+ 
+  line-height: 10px;
+  flex-direction: column;
+
+}
+.logoF p{
+ color: rgb(11, 64, 107);
+ font-weight: bold;
+}
+.logoF img{
+  width:40px;
+  height:40px;
+  margin-left: 20%;
+  }
+.fa-shopping-cart{
+/*   margin-top: 18px; */
+  opacity: 0.9;
+  }
+.fa-bars,.fa-shopping-cart{
+  font-size: 30px;
+  color: rgb(11, 64, 107)
+} 
+
+header{
+  background-color: #ebeff3;
+}
+
+.homeTitle {
+/*   text-decoration: dashed;
+ */  text-align: center;
+ margin-top: 15px;
+  font-size: 15px;
+  background: #ebeff3;
+  border-radius: 5px;
+  color: rgb(11, 64, 107);
+/*   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ */  font-style: oblique;
+ font-weight: bold; 
+}
+
+ #productos {
+  margin-top: 50px;
+} 
+.contenedorP {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+#productos .contenedorP img {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+
+@media (min-width: 1024px) {
+  .logoF img{
+    width:60px;
+    height:60px;
+    margin-left: 10%;
+    }
+
+    .contenedor{
+      height: 75px;
+    }
+
+}
+
+
+/* }
 body {
   background-image: url("../img/fondo.png");
   background-repeat: no-repeat;
@@ -27,13 +126,14 @@ header {
   width: 100%;
   height: auto;
   background: white;
-
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
 }
+
+*\
 .fa-shopping-cart {
   float: right;
 }
@@ -88,24 +188,7 @@ header .contenedor {
 section {
   width: 100%;
 }
-#productos {
-  text-align: center;
-  margin-top: 50px;
-}
-#productos .contenedor {
-  background-color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
-}
 
-#productos .contenedor img {
-  margin: 10px;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-}
 
 .fa-shopping-cart {
   margin-top: 15px
@@ -221,3 +304,4 @@ footer .direccion,
     }
   }
 
+ */

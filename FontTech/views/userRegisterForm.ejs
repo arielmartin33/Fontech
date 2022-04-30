@@ -4,14 +4,16 @@
 
   <body>
     <%- include ('./partials/header.ejs') %>
+
+    <div class="formularioCompleto">
       <div class="formulario-registro">
         <h3>Registrate mediante</h3>
 
         <div class="social-login-elemento">
-          <div>
+          <div class="google">
             <a href="#"><img src="../img/google.svg" alt="" /> <span>Google</span></a>
           </div>
-          <div>
+          <div class="facebook">
             <a href="#"><img src="../img/facebook.svg" alt="" /> <span>Facebook</span></a>
           </div>
         </div>
@@ -138,14 +140,16 @@
         </div>
 
         <div class="formularioGrupo formularioGrupoBtn ">
-          <button type="submit" class="btn-crea formularioBtn">Crea tu Cuenta</button>
+          <button type="submit" class="btn-crea formularioBtn ">Crea tu Cuenta</button>
           <p class="formularioMensajeExito" id="formularioMensajeExito">Cuenta creada exitosamente!</p>
-
+        </div>
           </form>
 
           <!-- <button type="submit" class="btn-crea">Crea tu Cuenta</button> -->
         </div>
       </div>
+    </div>
+    <hr>
       <%- include ('./partials/footer.ejs') %>
 
        <script src="../js/userRegisterForm.js"> </script>
