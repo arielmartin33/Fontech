@@ -1,5 +1,6 @@
 const { Product } = require('../database/models');
 const { Category } = require('../database/models');
+const db = require('../database/models');
 
 // const mainController = {
     
@@ -10,14 +11,27 @@ const { Category } = require('../database/models');
 
     module.exports = {
         index: (req, res) => {
-            Product.findAll({
+            db.Product.findAll({
                 where: {
-                    visited: true,
-                }
+                    offer: true,
+                },
+                include: [
+                    'images'
+                ]
             })
-            .then(products => res.render('home', { products }))
+            .then(products => {
+                const data = products.map(product => {
+                    const image = product.images.length > 0 ? product.images[0].url : 'default.jpg'
+                    return {
+                        ...product.dataValues,
+                        image
+                    }
+                })
+                res.render('home', {products:data})
+    
+            })
             .catch(error => res.send(error))
-    },
+        },
 }
     // register: (req, res) =>{
     //      return res.render('registro');

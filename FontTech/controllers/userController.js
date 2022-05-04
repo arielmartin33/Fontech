@@ -70,12 +70,12 @@ const controller = {
     loginProcess: async (req, res) => {
 
         let userToLogin = await User.findOne({ where: {'email': req.body.email }});
-        console.log(userToLogin);
+     
         if (userToLogin) {
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (passwordOk) {
                 delete userToLogin.password; // borro el password por seguridad
-                delete userToLogin.repassword;
+            
                 req.session.userLogged = userToLogin;
 
                 if (req.body.remember_user) {

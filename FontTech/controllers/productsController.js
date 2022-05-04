@@ -82,14 +82,14 @@ module.exports = {
 
     update: (req, res) =>{
         const {id} =req.params
-        const {name, discount, price, description} =req.body
+        const {name, discount, price, description, offer} =req.body
 
         
         db.Product.update({
             name,
             discount,
             price,
-            
+            offer,
             description
         },{
             where:{

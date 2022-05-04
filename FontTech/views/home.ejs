@@ -19,30 +19,25 @@
 
 
 
-    <h3 class="homeTitle">SEGÚN TU ÚLTIMA VISITA</h3>
-    <hr>
-    <section class="productosOferta">
-        <div class="container">
-                <div class="card"> 
-                    <img src="<%= products.productImage %> ">
-                    <h4><%= products.productName %></h4>
-                    <p><%= products.productPrice %></p>
-<!--                      <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> 
- -->                    <a href="/products/<%= products.idProduct %>"><button class="botones">Mas Info...</button> </a>
-                </div>
-        </div>
+    <!--  -->
     </section>
     <h3 class="homeTitle">PRODUCTOS EN OFERTA</h3>
     <hr>
     <section class="productosOferta">
         <div class="container">
-                <div class="card"> 
-                    <img src="<%= products.productImage %>">
-                    <h4><%= products.productDescription %></h4>
-                    <p><%= products.productPrice %></p>
-<!--                  <a href="/products">Mas Info...</a><a href=""><i class="fas fa-cart-arrow-down"></i></a> 
- -->                    <a href="/products/<%= products.idProduct %>"><button class="botones">Mas Info...</button></a>
+            <% products.forEach(element=>{ %>
+
+                
+            <div class="card">
+            
+                    <img src="img/product/<%= element.image %>">
+                    <h2><%= element.name %></h2>
+                    <p>$<%= element.price %></p>
+                    <p>-<%= element.discount%>% Off</p>
+                    <a href="/products/<%= element.id %>"><button class="botones">Mas Info...</button></a>
                 </div>
+
+                <%  })%>
         </div>
     </section> 
 
