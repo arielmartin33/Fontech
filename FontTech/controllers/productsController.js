@@ -8,7 +8,7 @@ const { Product_image } = require('../database/models');
 
 module.exports = {
     create: (req, res) => {
-        Category.findAll()
+        db.Category.findAll()
         .then((categories) => res.render('productCreate', { categories}))
         .catch(error => res.send(error))
     }, 
@@ -16,7 +16,7 @@ module.exports = {
         const {files} = req;
         const {name, description, price, discount, offer, category } = req.body;
         try{
-            const productCreated = await Product.create({
+            const productCreated = await db.Product.create({
                 name,
                 description, 
                 price,
@@ -38,7 +38,7 @@ module.exports = {
         }
     },
     index: (req, res) => {
-        Product.findAll({
+        db.Product.findAll({
             order: [
                 ['price', 'DESC']
             ],
@@ -60,7 +60,7 @@ module.exports = {
         .catch(error => res.send(error))
     },
     detail: (req, res) => {
-        Product.findOne({ 
+        db.Product.findOne({ 
             where: {
                 id: req.params.id
             },
@@ -73,7 +73,7 @@ module.exports = {
  
   
     edit: async (req, res) => {
-        Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
         .then (function (product){
             res.render('productEdit',{product:product})
 
@@ -102,6 +102,13 @@ module.exports = {
         .catch(err =>console.log(err))
     },
 
+    delete: (req,res) => {
+        let productId = req.params.id;
+        db.Product.destroy({where: {id: productId}}) 
+        .then(()=>{
+             res.redirect('/products')})
+        .catch(error => res.send(error)) 
+    },
 }
     
 

@@ -17,7 +17,7 @@ router.post('/', uploadImage.array('images', 3), productsController.store);
 
 router.get('/:id', productsController.detail),
 
-
+// // ******** Editar un producto *******
 router.get('/:id/edit', productsController.edit);
 router.put('/:id', productsController.update); 
  
@@ -26,11 +26,11 @@ router.put('/:id', productsController.update);
 
 
 
-// // ******** Editar un producto *******
+
 
 
 // // ********* Borrar un producto *******
 
-/* router.post('/:id', productsController.delete); */
+router.delete('/delete/:id', productsController.delete); 
 
 module.exports = router;
