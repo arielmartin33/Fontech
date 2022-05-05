@@ -1,5 +1,6 @@
 const db = require("../../database/models");
 const sequelize = db.sequelize;
+const Product = db.Producto;
 
 const productsController = {
   list:  (req, res) => {
@@ -8,8 +9,7 @@ const productsController = {
         return res.status(200).json({
           count: products.length,
           products: products,
-/*           image: 'http://localhost:3000/img/product' + '/' + product_image 
- */       status: 200,
+          status: 200,
         });
       })
       .catch((err) => res.json(err));
@@ -25,7 +25,7 @@ const productsController = {
         });
       })
       .catch((err) => res.status(200).json(err));
-  },
+  },  
 };
 
 module.exports = productsController;

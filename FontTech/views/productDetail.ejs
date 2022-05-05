@@ -21,15 +21,15 @@
                                     </div>
                                 <% }) %>
 
-                                <% if (locals.isLogged){ %>
+                               <% if (locals.isLogged){ %> 
                                     <div class="btnEditar">
                                         <button class="botones"> <a href="/products/<%=product.id %>/edit">Editar</a></button>
                                         <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                                         <button class="botones">Eliminar</button>
                                     </form>
                                     </div> 
-                                    <%    } %>    
-                         
+                                   <%    } %>    
+                          
                             </div>
                         </div>
                         <div class="escritorio">
